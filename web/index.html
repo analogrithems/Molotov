@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script type="text/javascript" src="js/wysihtml5_parser.js"></script>
+	<script type="text/javascript" src="js/wysihtml5.js"></script>
+	<script type="text/javascript" src="js/knockout.js"></script>
+	<script type="text/javascript" src="js/ar.js"></script>
+	<script>
+	$ar.api.route('user','/user');
+	$ar.api.route('u_companies','/user/companies');
+	$ar.api.route('login','/login');
+	$ar.api.route('logout','/logout',null,function(){
+		$ar.pub('loggedout');
+	});
+	$ar.api.route('contracts','/contracts');
+	$ar.api.route('save_contract','/contracts/save');
+	$ar.api.route('publish_contract','/contracts/publish',null,null,'POST');
+
+	ko.bindingHandlers.wysihtml5 = {
+		init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+			var toolbar = $ar.dom($ar.dom('#wysihtml5-toolbar').html());
+			$ar.dom(element).before(toolbar);
+			var control = new wysihtml5.Editor(element, { // id of textarea element
+				toolbar: toolbar[0], // id of toolbar element
+				parserRules: wysihtml5ParserRules, // defined in parser rules set 
+				style: true,
+			});
+			control.setValue( valueAccessor()() );
+			var update = function(){ valueAccessor()( control.getValue() ); };
+			control.on('newword:composer',update);
+			control.on('change',update);
+			valueAccessor().subscribe(function(nval){
+				if(nval != control.getValue())
+					control.setValue(nval);
+			});
+		}
+	};
+	</script>
+
+	<script type="text/javascript" src="js/shared-models.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/userauth.js"></script>
+	<script type="text/javascript" src="js/browser.js"></script>
+	<script type="text/javascript" src="js/dashboard.js"></script>
+	<script type="text/javascript" src="js/eula.js"></script>
+	<script type="text/javascript" src="js/account.js"></script>
+
+	<style>
+.agreement textarea {
+	width: 760px;
+	height: 800px;
+	box-sizing: border-box;
+	background: inherit;
+	border: none;
+	border: 1px solid #fff;
+	font-family: inherit;
+	font-size: inherit;
+	outline: none;
+}
+.agreement .editor-toolbar {
+	background: #E9C586;
+	margin: 5px 0;
+	padding: 0;
+}
+.agreement .editor-toolbar li {
+	color: inherit;
+	text-decoration: none;
+	padding: 5px 10px;
+	display: inline-block;
+	border-right: 1px solid #DFB978;
+}
+.agreement .editor-toolbar li:last-of-type {
+	border-right: none;
+}
+.agreement .editor-toolbar li.wysihtml5-command-active {
+	background:#DFB978;
+}
+.agreement .editor-toolbar .linker {
+	background: #DFB978;
+	padding: 10px;
+}
+.loading {
+	position:relative;
+	width:128px;
+	height:128px;
+}
+
+.loading div {
+	position:absolute;
+	background-color:#FFFFFF;
+	width:29px;
+	height:29px;
+
+	-moz-border-radius:19px;
+	-moz-animation-name:bounce_circularG;
+	-moz-animation-duration:1.04s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-direction:linear;
+
+	-webkit-border-radius:19px;
+	-webkit-animation-name:bounce_circularG;
+	-webkit-animation-duration:1.04s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:linear;
+
+	-ms-border-radius:19px;
+	-ms-animation-name:bounce_circularG;
+	-ms-animation-duration:1.04s;
+	-ms-animation-iteration-count:infinite;
+	-ms-animation-direction:linear;
+
+	-o-border-radius:19px;
+	-o-animation-name:bounce_circularG;
+	-o-animation-duration:1.04s;
+	-o-animation-iteration-count:infinite;
+	-o-animation-direction:linear;
+
+	border-radius:19px;
+	animation-name:bounce_circularG;
+	animation-duration:1.04s;
+	animation-iteration-count:infinite;
+	animation-direction:linear;
+}
+
+
+.loading div:nth-of-type(8) {
+	left:0;
+	top:50px;
+
+	-webkit-transform: scale(0.3);
+
+	-moz-animation-delay:1.3s;
+	-webkit-animation-delay:1.3s;
+	-ms-animation-delay:1.3s;
+	-o-animation-delay:1.3s;
+	animation-delay:1.3s;
+}
+
+.loading div:nth-of-type(1) {
+	left:14px;
+	top:14px;
+
+	-webkit-transform: scale(0.38749999999999996);
+
+	-moz-animation-delay:1.17s;
+	-webkit-animation-delay:1.17s;
+	-ms-animation-delay:1.17s;
+	-o-animation-delay:1.17s;
+	animation-delay:1.17s;
+}
+
+.loading div:nth-of-type(2) {
+	top:0;
+	left:50px;
+
+	-webkit-transform: scale(0.475);
+
+	-moz-animation-delay:1.04s;
+	-webkit-animation-delay:1.04s;
+	-ms-animation-delay:1.04s;
+	-o-animation-delay:1.04s;
+	animation-delay:1.04s;
+}
+
+.loading div:nth-of-type(3) {
+	right:14px;
+	top:14px;
+
+	-webkit-transform: scale(0.5625);
+
+	-moz-animation-delay:0.91s;
+	-webkit-animation-delay:0.91s;
+	-ms-animation-delay:0.91s;
+	-o-animation-delay:0.91s;
+	animation-delay:0.91s;
+}
+
+.loading div:nth-of-type(4) {
+	right:0;
+	top:50px;
+
+	-webkit-transform: scale(0.6499999999999999);
+
+	-moz-animation-delay:0.78s;
+	-webkit-animation-delay:0.78s;
+	-ms-animation-delay:0.78s;
+	-o-animation-delay:0.78s;
+	animation-delay:0.78s;
+}
+
+.loading div:nth-of-type(5) {
+	right:14px;
+	bottom:14px;
+
+	-webkit-transform: scale(0.7375);
+
+	-moz-animation-delay:0.65s;
+	-webkit-animation-delay:0.65s;
+	-ms-animation-delay:0.65s;
+	-o-animation-delay:0.65s;
+	animation-delay:0.65s;
+}
+
+.loading div:nth-of-type(6) {
+	left:50px;
+	bottom:0;
+
+	-webkit-transform: scale(0.825);
+
+	-moz-animation-delay:0.52s;
+	-webkit-animation-delay:0.52s;
+	-ms-animation-delay:0.52s;
+	-o-animation-delay:0.52s;
+	animation-delay:0.52s;
+}
+
+.loading div:nth-of-type(7) {
+	left:14px;
+	bottom:14px;
+
+	-webkit-transform: scale(0.9124999999999999);
+
+	-moz-animation-delay:0.39s;
+	-webkit-animation-delay:0.39s;
+	-ms-animation-delay:0.39s;
+	-o-animation-delay:0.39s;
+	animation-delay:0.39s;
+}
+
+@-moz-keyframes bounce_circularG {
+	0%{ -moz-transform:scale(1); }
+	100%{ -moz-transform:scale(.3); }
+}
+
+@-webkit-keyframes bounce_circularG {
+	0%{ -webkit-transform:scale(1); }
+	100%{ -webkit-transform:scale(.3); }
+}
+
+@-ms-keyframes bounce_circularG {
+	0%{ -ms-transform:scale(1); }
+	100%{ -ms-transform:scale(.3); }
+}
+
+@-o-keyframes bounce_circularG {
+	0%{ -o-transform:scale(1); }
+	100%{ -o-transform:scale(.3); }
+}
+
+@keyframes bounce_circularG {
+	0%{ transform:scale(1); }
+	100%{ transform:scale(.3); }
+}
+#login .loading {
+	position: absolute;
+	left: 50%;
+	margin-left: -64px;
+	top: 50%;
+	margin-top: -64px;
+}
+.small-load {
+	text-align: center;
+	width:48px;
+	height:30px;
+}
+
+.small-load span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 6px;
+	height: 6px;
+	margin: 15px auto;
+	background: #FFFFFF;
+	-moz-border-radius: 30px;
+	-moz-animation: bubblingG 0.5s infinite alternate;
+	-webkit-border-radius: 30px;
+	-webkit-animation: bubblingG 0.5s infinite alternate;
+	-ms-border-radius: 30px;
+	-ms-animation: bubblingG 0.5s infinite alternate;
+	-o-border-radius: 30px;
+	-o-animation: bubblingG 0.5s infinite alternate;
+	border-radius: 30px;
+	animation: bubblingG 0.5s infinite alternate;
+}
+
+.small-load span:nth-of-type(1) {
+	-moz-animation-delay: 0s;
+	-webkit-animation-delay: 0s;
+	-ms-animation-delay: 0s;
+	-o-animation-delay: 0s;
+	animation-delay: 0s;
+}
+.small-load span:nth-of-type(2) {
+	-moz-animation-delay: 0.15s;
+	-webkit-animation-delay: 0.15s;
+	-ms-animation-delay: 0.15s;
+	-o-animation-delay: 0.15s;
+	animation-delay: 0.15s;
+}
+.small-load span:nth-of-type(3) {
+	-moz-animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+	-ms-animation-delay: 0.3s;
+	-o-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+@-moz-keyframes bubblingG {
+	0% {
+		width: 6px;
+		height: 6px;
+		-moz-transform: translateY(0);
+	}
+	100% {
+		width: 14px;
+		height: 14px;
+		-moz-transform: translateY(-6px);
+	}
+}
+
+@-webkit-keyframes bubblingG {
+	0% {
+		width: 6px;
+		height: 6px;
+		-webkit-transform: translateY(0);
+	}
+
+	100% {
+		width: 14px;
+		height: 14px;
+		-webkit-transform: translateY(-6px);
+	}
+
+}
+
+@-ms-keyframes bubblingG {
+	0% {
+		width: 6px;
+		height: 6px;
+		-ms-transform: translateY(0);
+	}
+
+	100% {
+		width: 14px;
+		height: 14px;
+		-ms-transform: translateY(-6px);
+	}
+
+}
+
+@-o-keyframes bubblingG {
+	0% {
+		width: 6px;
+		height: 6px;
+		-o-transform: translateY(0);
+	}
+
+	100% {
+		width: 14px;
+		height: 14px;
+		-o-transform: translateY(-6px);
+	}
+
+}
+
+@keyframes bubblingG {
+	0% {
+		width: 6px;
+		height: 6px;
+		transform: translateY(0);
+	}
+
+	100% {
+		width: 14px;
+		height: 14px;
+		transform: translateY(-6px);
+	}
+
+}
+#eula .small-load {
+	float:right;
+	padding-right: 10px;
+}
+#eula .small-load span {
+	background: #E9C586;
+}
+	</style>
+</head>
+<body>
+	<div id="login" class="sidebar show" data-bind="css: { 'show': show }">
+		<div class="loading" data-bind="visible: loading">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="floater" data-bind="visible: !loading()">
+			<div class="header">
+				<h1>Account Manager</h1>
+				<h2>a product of <span>ActivityRez</span></h2>
+			</div>
+			<div class="buttons">
+				<button class="btn" data-bind="click: login">
+					<!-- ko if:!signup() -->login<!-- /ko -->
+					<!-- ko if:signup() -->sign up<!-- /ko -->
+				</button>
+				<div class="creator" data-bind="click: toggle_sign">
+					<!-- ko if:!signup() -->or <span>sign up</span><!-- /ko -->
+					<!-- ko if:signup() -->go <span>back</span><!-- /ko -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-wrap"><input type="text" placeholder="username" data-bind="value: username"></div>
+			</div>
+			<div class="row">
+				<div class="input-wrap"><input type="password" placeholder="password" data-bind="value: password"></div>
+			</div>
+			<!-- ko if: signup -->
+			<div class="row">
+				<div class="input-wrap"><input type="text" placeholder="email" data-bind="value: email"></div>
+			</div>
+			<div class="row">
+				<div class="input-wrap"><input type="text" placeholder="company" data-bind="value: company"></div>
+			</div>
+			<!-- /ko -->
+			<div class="error" data-bind="text:error"></div>
+		</div>
+	</div>
+	<div id="browser" class="sidebar" data-bind="css: { show: show }">
+		<a class="header" href="#/home/">dan the fajit</a>
+		<h3>agency<span>digital mediums</span></h3>
+		<a class="btn" href="#/account/">my account</a>
+		<!-- next two seen by company admins -->
+		<div class="btn disabled">users</div>
+		<div class="btn disabled">companies</div>
+		<!-- only seen by digital mediums admins -->
+		<a class="btn" href="#/eula/">user contracts</a>
+	</div>
+	<div id="dashboard" class="page" data-bind="if:show, css: { 'show': show }">
+		<div class="floater">
+			<h1>Welcome to the ActivityRez Account Manager</h1>
+		</div>
+	</div>
+	<div id="eula" class="page" data-bind="if: show, css: { 'show': show }">
+		<h1 class="row"><div class="btn" data-bind="click: add">+</div>User Agreements</h1>
+		<!-- ko foreach: contracts.items -->
+		<div class="agreement row">
+			<!-- ko if:!active() -->
+			<!-- ko if: loading -->
+			<div class="small-load"><span></span><span></span><span></span></div>
+			<!-- /ko -->
+			<!-- ko if: !loading() -->
+			<div class="btn active" data-bind="click: activator">remove</div>
+			<div class="version">
+				<span data-bind="text:version"></span>
+				<div>version</div>
+			</div>
+			<!-- /ko -->
+			<div class="title" data-bind="text:title, click: $root.edit"></div>
+			<!-- /ko -->
+			<!-- ko if:active() -->
+			<div class="buttons">
+				<div class="btn" data-bind="click: cancel">cancel</div>
+				<div class="btn" data-bind="click: publishor">publish</div>
+				<div class="btn" data-bind="click: save">save</div>
+			</div>
+			<div class="title input-wrap"><input type="text" data-bind="value: title"></div>
+			<textarea data-bind="wysihtml5: text"></textarea>
+			<!-- /ko -->
+		</div>
+		<!-- /ko -->
+		<div class="more row" data-bind="visible: contracts.left,click:contracts.more"><span data-bind="text:contracts.left"></span> more</div>
+		<!-- ko if: dead_contracts.items().length > 0 -->
+		<h2>dead agreements</h2>
+		<!-- ko foreach: dead_contracts.items -->
+		<div class="agreement row dead">
+			<!-- ko if: loading -->
+			<div class="small-load"><span></span><span></span><span></span></div>
+			<!-- /ko -->
+			<!-- ko if: !loading() -->
+			<div class="btn active" data-bind="click: activator">activate</div>
+			<!-- /ko -->
+			<div class="title" data-bind="text:title, click: $root.edit"></div>
+			<!-- ko if:active() -->
+			<div class="text" data-bind="html:text"></div>
+			<!-- /ko -->
+		</div>
+		<!-- /ko -->
+		<!-- /ko -->
+		<div class="more row" data-bind="visible: dead_contracts.left,click:dead_contracts.more"><span data-bind="text:dead_contracts.left"></span> more</div>
+	</div>
+	<div id="account" class="page" data-bind="if: show, css: { 'show': show }">
+		<h1 class="row">information</h1>
+		<div class="row">
+			<div class="col">
+				<div class="title">name</div>
+				<!-- ko if: !editing() -->
+				<div class="value" data-bind="text: user.name"></div>
+				<!-- /ko -->
+				<!-- ko if: editing -->
+				<div class="input-wrap"><input type="text" data-bind="value: user.name"></div>
+				<!-- /ko -->
+			</div>
+			<div class="col">
+				<div class="title">company</div>
+				<!-- ko if: !editing() -->
+				<div class="value" data-bind="text: selectedCompany"></div>
+				<!-- /ko -->
+				<!-- ko if: editing -->
+				<!-- /ko -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="title">email</div>
+				<!-- ko if: !editing() -->
+				<div class="value" data-bind="text: user.email"></div>
+				<!-- /ko -->
+				<!-- ko if: editing -->
+				<div class="input-wrap"><input type="text" data-bind="value: user.email"></div>
+				<!-- /ko -->
+			</div>
+			<div class="col">
+				<div class="title">password</div>
+				<!-- ko if: !editing() -->
+				<div class="value">*************</div>
+				<!-- /ko -->
+				<!-- ko if: editing -->
+				<div class="input-wrap"><input type="password" data-bind="value: user.password"></div>
+				<!-- /ko -->
+			</div>
+		</div>
+		<h1>agreements</h1>
+	</div>
+	<div id="default" class="page show" data-bind="css: { 'show': show }"></div>
+
+	<script type="text/html" id="wysihtml5-toolbar">
+		<ul class="editor-toolbar">
+			<li data-wysihtml5-command="bold">bold</li><!--
+			--><li data-wysihtml5-command="italic">italic</li><!--
+			--><li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">header</li><!--
+			--><li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2">subheader</li><!--
+			--><li data-wysihtml5-command="insertUnorderedList">unordered list</li><!--
+			--><li data-wysihtml5-command="insertOrderedList">ordered list</li><!--
+			--><li data-wysihtml5-command="createLink">insert link</li>
+			<div class="linker" data-wysihtml5-dialog="createLink" style="display: none;">
+				<label>
+					Link:
+					<input data-wysihtml5-dialog-field="href" value="http://" class="text">
+				</label>
+				<a data-wysihtml5-dialog-action="save">OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+			</div>
+		</ul>
+	</script>
+</body>
+</html>

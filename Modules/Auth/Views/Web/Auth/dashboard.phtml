@@ -1,0 +1,21 @@
+        <div id="dashboard" data-bind="if: show" style="position: relative;">
+            <div class="ui fixed transparent inverted main menu" style="position: relative;">
+                <a class="active item">
+                  <i class="home icon"></i>
+                </a>
+                <!-- ko foreach: widgets -->
+                <a class="item" data-bind="attr: {href: link}"><i class="icon" data-bind="css: icon"></i><b data-bind="text:title"></b></a>
+                <!-- /ko -->
+                <div class="right menu">
+                  <div class="ui dropdown item">
+                    <b data-bind="text: Auth.Login.display_name"></b> <i class="icon dropdown"></i>
+                    <div class="menu">
+                      <a class="item"><i class="edit icon"></i> Edit Profile</a>
+                      <a class="item"><i class="settings icon"></i> Account Settings</a>
+                      <a class="item" href="#logout"><i class="sign out icon"></i> Logout</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <?php include_once('group.phtml'); ?>

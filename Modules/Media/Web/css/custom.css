@@ -1,0 +1,90 @@
+
+.main.menu .container {
+	width: 70%;
+	margin: 0px auto;
+}
+
+.segment{
+	margin: 0px 0px 3em;
+}
+
+.expandRow:hover td div{
+	
+}
+
+.clearFix{
+	clear: both;
+}
+.gap{
+	padding: 10px 0;
+}
+.sidebar {
+	position: relative;
+	overflow: scroll;
+	height: 100%;
+}
+.scrollbox{
+	position: absolute;
+}
+.ui.small.items>.row>.item, .ui.small.items>.item {
+	display: block;
+	float: left;
+	position: relative;
+	top: 0;
+	width: 280px;
+	min-height: 300px;
+	margin: 0 .5em 2.5em;
+	padding: 0;
+	background-color: #FFF;
+	line-height: 1.2;
+	font-size: 1em;
+	-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+	box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+	border-bottom: .2em solid rgba(0,0,0,.2);
+	-moz-border-radius: .33em;
+	-webkit-border-radius: .33em;
+	border-radius: .33em;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	transition: all .2s ease;
+	padding: .5em;
+}
+
+.menuItem{
+	padding: 0 0 5px 0;
+}
+
+#mediaList{
+	min-height: 93%;
+}
+
+.ui.table.highlight tbody tr:hover {
+	background-color: rgba(0,0,0,.1);
+}
+.ui.table.highlight tbody tr:hover:nth-child(2n) {
+	background-color: rgba(0,0,0,.1);
+}
+.hover{
+	visibility: hidden;
+}
+tr:hover td .hover{
+	visibility: visible;
+}
+#audio-container audio{
+	display: none;
+}
+#audio-container {
+	width:360px;
+	height:30px;
+}
+
+#video-container {
+	position: relative;
+	max-width:640px;
+	margin:0 auto 160px;
+	padding:0 40px 8px;
+	background:url(lib/shadow.png) 0 352px no-repeat;
+}

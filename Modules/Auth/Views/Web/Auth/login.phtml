@@ -1,0 +1,38 @@
+<div id="login" class="ui two column page grid" data-bind="if: show">
+  <div class="column">
+    <div class="ui labeled vertical fluid inverted">
+      <div  class="ui form segment">
+        <form data-bind="submit: login">
+          <div class="field">
+            <label>Username</label>
+            <div class="ui left labeled icon input">
+              <input type="text" placeholder="Username" data-bind="value: email">
+              <i class="user icon"></i>
+              <div class="ui corner label">
+                <i class="icon asterisk"></i>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <div class="ui left labeled icon input">
+              <input type="password" data-bind="value: password">
+              <i class="lock icon"></i>
+              <div class="ui corner label">
+                <i class="icon asterisk"></i>
+              </div>
+            </div>
+          </div>
+          <div class="ui error message" data-bind="style: { display: error() ? 'block' : 'none'} " style="display: none;" >
+            <div class="header" data-bind="text: error"></div>
+          </div>
+			<div class="ui buttons">
+				<div class="ui blue submit button" data-bind="click: login">Login</div>
+				<div class="or"></div>
+				<a class="ui red submit button" href="#passwordResetRequest">Forgot Password</a>
+			</div>
+        </form>
+      </div>
+    </div>
+  </div><!-- /end column -->
+</div><!-- /end ,ogin -->
