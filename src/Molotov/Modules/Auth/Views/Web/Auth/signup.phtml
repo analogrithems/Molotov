@@ -1,32 +1,49 @@
-<div id="signup" class="ui error form segment" style="display: none;" data-bind="visible: show, css: { loading: addingUser}">
-  <div class="ui error message" style="display: none" data-bind="visible: errorMessage">
-    <div class="header">Error</div>
-    <p data-bind="html: errorMessage"></p>
-  </div>
-  <div class="two fields">
-    <div class="field">
-      <label>First Name</label>
-      <input placeholder="First Name" type="text">
-    </div>
-    <div class="field">
-      <label>Last Name</label>
-      <input placeholder="Last Name" type="text">
-    </div>
-  </div>
-  <div class="field">
-    <label>Email</label>
-    <input placeholder="email" type="text" data-bind="value: email">
-  </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password" data-bind="value: password">
-  </div>
-  <div class="inline field">
-    <div class="ui checkbox">
-      <input type="checkbox" id="terms">
-      <label for="terms"></label>
-    </div>
-    <label>I agree to the terms and conditions</label>
-  </div>
-  <div class="ui blue submit button" data-bind="click: signup">Submit</div>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Management</title>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+        <?php $assets->outputCss(); ?>
+    </head>
+    <body style="margin: 0;">
+    
+		<div id="signup" class="ui error form segment" data-bind="if: show, css: { loading: loading}">
+		  <div class="ui error message" style="display: none" data-bind="visible: error">
+		    <div class="header">Error</div>
+		    <p data-bind="html: error"></p>
+		  </div>
+		  <div class="two fields">
+		    <div class="field">
+		      <label>First Name</label>
+		      <input placeholder="First Name" type="text">
+		    </div>
+		    <div class="field">
+		      <label>Last Name</label>
+		      <input placeholder="Last Name" type="text">
+		    </div>
+		  </div>
+		  <div class="field">
+		    <label>Email</label>
+		    <input placeholder="email" type="text" data-bind="value: email">
+		  </div>
+		  <div class="field">
+		    <label>Password</label>
+		    <input type="password" data-bind="value: password">
+		  </div>
+		  <div class="inline field">
+		    <div class="ui checkbox">
+		      <input type="checkbox" id="terms">
+		      <label for="terms"></label>
+		    </div>
+		    <label>I agree to the terms and conditions</label>
+		  </div>
+		  <div class="ui blue submit button" data-bind="click: signup">Submit</div>
+		</div>
+
+        <?php $assets->outputJs(); ?>
+    </body>
+<html>

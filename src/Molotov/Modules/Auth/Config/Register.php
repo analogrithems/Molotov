@@ -92,7 +92,7 @@ $app->map('/Signup',function() use ($app,$di){
 	$assets->addJs('js/modules/router.js');
 	$assets->addJs('src/Molotov/Modules/Auth/Views/Web/Auth/js/signup.js');
 	$view->setViewsDir($viewPath);
-	echo $view->render('index',array('assets'=>$assets));
+	echo $view->render('signup',array('assets'=>$assets));
 
 })->via(array('GET','POST'));
 

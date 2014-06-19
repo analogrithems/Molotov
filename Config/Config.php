@@ -15,10 +15,9 @@ return array(
 	),
 	'db'=>array(
 	    "host" => 'localhost',
-	    "username" => "av",
+	    "username" => "molotov",
 	    "password" => "sdhw93fq2das",
-	    "dbname" => 'av',
-            "table_prefix" => 'av_',
+	    "dbname" => 'molotov',
 	    'logging'=> array(
 	    	'file'=>  APP_ROOT_DIR . '/Logs/sql.query.log'
 	    )

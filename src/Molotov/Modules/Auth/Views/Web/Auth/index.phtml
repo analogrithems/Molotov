@@ -1,4 +1,5 @@
-	<html>
+<!DOCTYPE html>
+<html>
     <head>
         <title>Account Management</title>
 	<!-- Standard Meta -->
@@ -9,10 +10,20 @@
         <?php $assets->outputCss(); ?>
     </head>
     <body style="margin: 0;">
-		<?php include_once('login.phtml'); ?>
-		<?php include_once('passwordResetRequest.phtml'); ?>
-		<?php include_once('passwordReset.phtml'); ?>
-		<?php include_once('dashboard.phtml'); ?>		
+
+
+<!-- Start of Dynamic pages -->
+
+<?php include_once('login.phtml'); ?>
+
+<?php include_once('passwordResetRequest.phtml'); ?>
+
+<?php include_once('passwordReset.phtml'); ?>
+
+<?php include_once('dashboard.phtml'); ?>		
+
+<!-- End of Dynamic pages -->
+
 
         <?php $assets->outputJs(); ?>
     </body>
