@@ -8,22 +8,24 @@ header("Access-Control-Allow-Credentials:false");
 require_once(__DIR__ . '/vendor/autoload.php');
 
 define('APP_ROOT_DIR',__DIR__);
-define('MODULES_DIR',APP_ROOT_DIR . '/Modules');
-define('CORE_TEST_DIR', APP_ROOT_DIR . '/Core/Tests' );
+define('MODULES_DIR',APP_ROOT_DIR . '/src/Molotov/Modules');
+define('CORE_TEST_DIR', APP_ROOT_DIR . '/src/Molotov/Core/Tests' );
 
 // Init DIC and App Wide Services
 $di = new Phalcon\DI\FactoryDefault();
 
-$di->set('config', function() {
+$di->setShared('config', function() {
 	return include('Config/Config.php');
 });
 $config = $di->get('config');
 
 
 //specify elastic search handler
+/*
 $di->set('es', function() use ($config) {
 	return  new \Elastica\Client( $config['esconfig'] );
 });
+*/
 
 //event manager
 $di->setShared('eventsManager', function(){
@@ -38,7 +40,7 @@ $di->set('profiler', function(){
 }, true);
 
 //database up
-$di->set('db', function() use ($config,$di) {
+$di->setShared('db', function() use ($config,$di) {
 
     $connection = new Phalcon\Db\Adapter\Pdo\Mysql($config['db']);	
 
@@ -70,7 +72,7 @@ $di->set('db', function() use ($config,$di) {
     return $connection;
 });
 
-$di->set('log', function() use ($config) {
+$di->setShared('log', function() use ($config) {
 	$logger =  new Phalcon\Logger\Adapter\File( $config['logging']['file'] );
 	return $logger;
 });
@@ -100,6 +102,24 @@ $app = new Phalcon\Mvc\Micro($di);
 
 $debug = new \Phalcon\Debug();
 $debug->listen();
+
+
+//We now have a message queue
+$di->setShared('queue', function() use ($config,$di){
+
+	$_url = parse_url($config['site_url']);
+	$prefix = strstr($_url['host'],'.',1).'_';
+
+	return new Phalcon\Queue\Beanstalk\Extended(array(
+		'host'=>$config['queue_host'],
+		'prefix'=>$prefix,
+		'logger'=>$di->get('log')
+	));
+});
+
+//Create Email Queue, usually you'd add a queue in a module
+
+$di->get('queue')->addWorker('email','Molotov\Core\Lib\Email::sendEmail');
 
 //Load All Module Routes
 foreach( scandir( MODULES_DIR ) as $m) {
@@ -139,7 +159,7 @@ $app->after(function() use ($app) {
 
 //Auto Loader
 $loader = new \Phalcon\Loader();
-$loader->registerNamespaces($config['namespaces']);
+//$loader->registerNamespaces($config['namespaces']);
 // register autoloader
 $loader->register();
 

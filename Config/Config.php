@@ -6,6 +6,7 @@ return array(
 	'namespaces' => array(
 		'Molotov\Core\Models' =>  APP_ROOT_DIR . "/Core/Models",
 		'Molotov\Core\Controllers' =>  APP_ROOT_DIR . "/Core/Controllers",
+		'Molotov\Core\Lib' =>  APP_ROOT_DIR . "/Core/Lib",
 		'Molotov\Core\Tests' =>  APP_ROOT_DIR . "/Core/Tests",
 	),
 	'esconfig'=> array(
@@ -26,6 +27,7 @@ return array(
 		'file'=> APP_ROOT_DIR . '/Logs/debug',
 		'enabled'=> true
 	),
-	'site_url'=>"https://vault.asynonymous.net"
+	'site_url'=>"https://vault.asynonymous.net",
+	'queue_host'=>'localhost'
 	
 );

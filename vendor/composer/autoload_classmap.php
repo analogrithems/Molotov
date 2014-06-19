@@ -209,6 +209,7 @@ return array(
     'PHP_Token_CHARACTER' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'PHP_Token_CLASS' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'PHP_Token_CLASS_C' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
+    'PHP_Token_CLASS_NAME_CONSTANT' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'PHP_Token_CLONE' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'PHP_Token_CLOSE_BRACKET' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',
     'PHP_Token_CLOSE_CURLY' => $vendorDir . '/phpunit/php-token-stream/PHP/Token.php',

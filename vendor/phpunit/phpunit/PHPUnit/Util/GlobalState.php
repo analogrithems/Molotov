@@ -2,7 +2,7 @@
 /**
  * PHPUnit
  *
- * Copyright (c) 2001-2013, Sebastian Bergmann <sebastian@phpunit.de>.
+ * Copyright (c) 2001-2014, Sebastian Bergmann <sebastian@phpunit.de>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@
  * @package    PHPUnit
  * @subpackage Util
  * @author     Sebastian Bergmann <sebastian@phpunit.de>
- * @copyright  2001-2013 Sebastian Bergmann <sebastian@phpunit.de>
+ * @copyright  2001-2014 Sebastian Bergmann <sebastian@phpunit.de>
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link       http://www.phpunit.de/
  * @since      File available since Release 3.4.0
@@ -49,7 +49,7 @@
  * @package    PHPUnit
  * @subpackage Util
  * @author     Sebastian Bergmann <sebastian@phpunit.de>
- * @copyright  2001-2013 Sebastian Bergmann <sebastian@phpunit.de>
+ * @copyright  2001-2014 Sebastian Bergmann <sebastian@phpunit.de>
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link       http://www.phpunit.de/
  * @since      Class available since Release 3.4.0
@@ -201,8 +201,8 @@ class PHPUnit_Util_GlobalState
         for ($i = count($files) - 1; $i > 0; $i--) {
             $file = $files[$i];
 
-            if ($prefix !== FALSE) {
-                $file = str_replace($prefix, '', $file);
+            if ($prefix !== FALSE && strpos($file, $prefix) === 0) {
+                continue;
             }
 
             if (!isset($blacklist[$file]) && is_file($file)) {
@@ -383,6 +383,7 @@ class PHPUnit_Util_GlobalState
     public static function phpunitFiles()
     {
         if (self::$phpunitFiles === NULL) {
+            self::$phpunitFiles = array();
             self::addDirectoryContainingClassToPHPUnitFilesList('File_Iterator');
             self::addDirectoryContainingClassToPHPUnitFilesList('PHP_CodeCoverage');
             self::addDirectoryContainingClassToPHPUnitFilesList('PHP_Invoker');

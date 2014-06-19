@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Phalcon' => array($vendorDir . '/phalcon/incubator/Library'),
+    'Molotov' => array($baseDir . '/src'),
     'Elastica\\Test' => array($vendorDir . '/ruflin/elastica/test/lib'),
     'Elastica' => array($vendorDir . '/ruflin/elastica/lib'),
-    'Arez' => array($baseDir . '/src'),
 );

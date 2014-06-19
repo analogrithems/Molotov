@@ -1,201 +1,5 @@
 [
     {
-        "name": "ruflin/elastica",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/ruflin/Elastica.git",
-            "reference": "e9f0bb4a19b33d151caaed4677e3c015ac873ff9"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/ruflin/Elastica/zipball/e9f0bb4a19b33d151caaed4677e3c015ac873ff9",
-            "reference": "e9f0bb4a19b33d151caaed4677e3c015ac873ff9",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "munkie/elasticsearch-thrift-php": "1.4.*",
-            "psr/log": "~1.0"
-        },
-        "suggest": {
-            "monolog/monolog": "Logging request",
-            "munkie/elasticsearch-thrift-php": "Allow using thrift transport",
-            "psr/log": "for logging"
-        },
-        "time": "2013-09-04 09:05:22",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "0.20.5.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Elastica": "lib/",
-                "Elastica\\Test": "test/lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache 2.0"
-        ],
-        "authors": [
-            {
-                "name": "Nicolas Ruflin",
-                "homepage": "http://ruflin.com/"
-            }
-        ],
-        "description": "Elasticsearch Client",
-        "homepage": "http://ruflin.github.com/Elastica/",
-        "keywords": [
-            "client",
-            "search"
-        ]
-    },
-    {
-        "name": "phalcon/incubator",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/phalcon/incubator.git",
-            "reference": "55134d75e31fa86baade5801956cfb220a4d0bee"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/phalcon/incubator/zipball/55134d75e31fa86baade5801956cfb220a4d0bee",
-            "reference": "55134d75e31fa86baade5801956cfb220a4d0bee",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.6"
-        },
-        "time": "2013-09-06 12:44:04",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Phalcon": "Library/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3"
-        ],
-        "authors": [
-            {
-                "name": "Phalcon Team",
-                "email": "team@phalconphp.com"
-            }
-        ],
-        "description": "Adapters, prototypes or functionality that can be potentially incorporated to the C-framework.",
-        "homepage": "http://phalconphp.com",
-        "keywords": [
-            "framework",
-            "phalcon"
-        ]
-    },
-    {
-        "name": "symfony/yaml",
-        "version": "v2.3.4",
-        "version_normalized": "2.3.4.0",
-        "target-dir": "Symfony/Component/Yaml",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/Yaml.git",
-            "reference": "5a279f1b5f5e1045a6c432354d9ea727ff3a9847"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/Yaml/zipball/5a279f1b5f5e1045a6c432354d9ea727ff3a9847",
-            "reference": "5a279f1b5f5e1045a6c432354d9ea727ff3a9847",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "time": "2013-08-24 15:26:22",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.3-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Symfony\\Component\\Yaml\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "http://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Yaml Component",
-        "homepage": "http://symfony.com"
-    },
-    {
-        "name": "phpunit/php-text-template",
-        "version": "1.1.4",
-        "version_normalized": "1.1.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sebastianbergmann/php-text-template.git",
-            "reference": "5180896f51c5b3648ac946b05f9ec02be78a0b23"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/5180896f51c5b3648ac946b05f9ec02be78a0b23",
-            "reference": "5180896f51c5b3648ac946b05f9ec02be78a0b23",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "time": "2012-10-31 18:15:28",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "Text/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "include-path": [
-            ""
-        ],
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Sebastian Bergmann",
-                "email": "sb@sebastian-bergmann.de",
-                "role": "lead"
-            }
-        ],
-        "description": "Simple template engine.",
-        "homepage": "https://github.com/sebastianbergmann/php-text-template/",
-        "keywords": [
-            "template"
-        ]
-    },
-    {
         "name": "phpunit/phpunit-mock-objects",
         "version": "1.2.3",
         "version_normalized": "1.2.3.0",
@@ -293,25 +97,122 @@
         ]
     },
     {
-        "name": "phpunit/php-token-stream",
+        "name": "symfony/yaml",
+        "version": "v2.5.0",
+        "version_normalized": "2.5.0.0",
+        "target-dir": "Symfony/Component/Yaml",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/Yaml.git",
+            "reference": "b4b09c68ec2f2727574544ef0173684281a5033c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/Yaml/zipball/b4b09c68ec2f2727574544ef0173684281a5033c",
+            "reference": "b4b09c68ec2f2727574544ef0173684281a5033c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2014-05-16 14:25:18",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Symfony\\Component\\Yaml\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com",
+                "homepage": "http://fabien.potencier.org",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Yaml Component",
+        "homepage": "http://symfony.com"
+    },
+    {
+        "name": "phpunit/php-text-template",
         "version": "1.2.0",
         "version_normalized": "1.2.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-            "reference": "31babf400e5b5868573bf49a000a3519d3978233"
+            "url": "https://github.com/sebastianbergmann/php-text-template.git",
+            "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/31babf400e5b5868573bf49a000a3519d3978233",
-            "reference": "31babf400e5b5868573bf49a000a3519d3978233",
+            "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+            "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2014-01-30 17:20:04",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "Text/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "include-path": [
+            ""
+        ],
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sb@sebastian-bergmann.de",
+                "role": "lead"
+            }
+        ],
+        "description": "Simple template engine.",
+        "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+        "keywords": [
+            "template"
+        ]
+    },
+    {
+        "name": "phpunit/php-token-stream",
+        "version": "1.2.2",
+        "version_normalized": "1.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastianbergmann/php-token-stream.git",
+            "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/ad4e1e23ae01b483c16f600ff1bebec184588e32",
+            "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32",
             "shasum": ""
         },
         "require": {
             "ext-tokenizer": "*",
             "php": ">=5.3.3"
         },
-        "time": "2013-08-04 05:57:48",
+        "time": "2014-03-03 05:10:30",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -346,23 +247,23 @@
     },
     {
         "name": "phpunit/php-file-iterator",
-        "version": "1.3.3",
-        "version_normalized": "1.3.3.0",
+        "version": "1.3.4",
+        "version_normalized": "1.3.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-            "reference": "16a78140ed2fc01b945cfa539665fadc6a038029"
+            "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/16a78140ed2fc01b945cfa539665fadc6a038029",
-            "reference": "16a78140ed2fc01b945cfa539665fadc6a038029",
+            "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/acd690379117b042d1c8af1fafd61bde001bf6bb",
+            "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2012-10-11 11:44:38",
+        "time": "2013-10-10 15:34:57",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -385,7 +286,7 @@
             }
         ],
         "description": "FilterIterator implementation that filters files based on a list of suffixes.",
-        "homepage": "http://www.phpunit.de/",
+        "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
         "keywords": [
             "filesystem",
             "iterator"
@@ -393,23 +294,23 @@
     },
     {
         "name": "phpunit/php-code-coverage",
-        "version": "1.2.12",
-        "version_normalized": "1.2.12.0",
+        "version": "1.2.17",
+        "version_normalized": "1.2.17.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-            "reference": "0e9958c459d675fb497d8dc5001c91d335734e48"
+            "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/0e9958c459d675fb497d8dc5001c91d335734e48",
-            "reference": "0e9958c459d675fb497d8dc5001c91d335734e48",
+            "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
+            "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3",
             "phpunit/php-file-iterator": ">=1.3.0@stable",
-            "phpunit/php-text-template": ">=1.1.1@stable",
+            "phpunit/php-text-template": ">=1.2.0@stable",
             "phpunit/php-token-stream": ">=1.1.3@stable"
         },
         "require-dev": {
@@ -419,7 +320,7 @@
             "ext-dom": "*",
             "ext-xdebug": ">=2.0.5"
         },
-        "time": "2013-07-06 06:26:16",
+        "time": "2014-03-28 10:53:45",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -456,42 +357,41 @@
     },
     {
         "name": "phpunit/phpunit",
-        "version": "3.7.24",
-        "version_normalized": "3.7.24.0",
+        "version": "3.7.37",
+        "version_normalized": "3.7.37.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "af7b77ccb5c64458bdfca95665d29558d1df7d08"
+            "reference": "ae6cefd7cc84586a5ef27e04bae11ee940ec63dc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/af7b77ccb5c64458bdfca95665d29558d1df7d08",
-            "reference": "af7b77ccb5c64458bdfca95665d29558d1df7d08",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ae6cefd7cc84586a5ef27e04bae11ee940ec63dc",
+            "reference": "ae6cefd7cc84586a5ef27e04bae11ee940ec63dc",
             "shasum": ""
         },
         "require": {
+            "ext-ctype": "*",
             "ext-dom": "*",
+            "ext-json": "*",
             "ext-pcre": "*",
             "ext-reflection": "*",
             "ext-spl": "*",
             "php": ">=5.3.3",
-            "phpunit/php-code-coverage": "~1.2.1",
-            "phpunit/php-file-iterator": ">=1.3.1",
-            "phpunit/php-text-template": ">=1.1.1",
-            "phpunit/php-timer": ">=1.0.4",
-            "phpunit/phpunit-mock-objects": "~1.2.0",
+            "phpunit/php-code-coverage": "~1.2",
+            "phpunit/php-file-iterator": "~1.3",
+            "phpunit/php-text-template": "~1.1",
+            "phpunit/php-timer": "~1.0",
+            "phpunit/phpunit-mock-objects": "~1.2",
             "symfony/yaml": "~2.0"
         },
         "require-dev": {
-            "pear-pear/pear": "1.9.4"
+            "pear-pear.php.net/pear": "1.9.4"
         },
         "suggest": {
-            "ext-json": "*",
-            "ext-simplexml": "*",
-            "ext-tokenizer": "*",
-            "phpunit/php-invoker": ">=1.1.0,<1.2.0"
+            "phpunit/php-invoker": "~1.1"
         },
-        "time": "2013-08-09 06:58:24",
+        "time": "2014-04-30 12:24:19",
         "bin": [
             "composer/bin/phpunit"
         ],
@@ -528,6 +428,111 @@
             "phpunit",
             "testing",
             "xunit"
+        ]
+    },
+    {
+        "name": "ruflin/elastica",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ruflin/Elastica.git",
+            "reference": "3c3ee39f90d942b1f25fdfb9d39669067375fa79"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ruflin/Elastica/zipball/3c3ee39f90d942b1f25fdfb9d39669067375fa79",
+            "reference": "3c3ee39f90d942b1f25fdfb9d39669067375fa79",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "munkie/elasticsearch-thrift-php": "1.4.*",
+            "phpunit/phpunit": "4.1.*",
+            "psr/log": "~1.0",
+            "satooshi/php-coveralls": "dev-master"
+        },
+        "suggest": {
+            "guzzlehttp/guzzle": "Allow using guzzle 4.x as the http transport (requires php 5.4)",
+            "monolog/monolog": "Logging request",
+            "munkie/elasticsearch-thrift-php": "Allow using thrift transport",
+            "psr/log": "for logging"
+        },
+        "time": "2014-06-14 08:44:53",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Elastica": "lib/",
+                "Elastica\\Test": "test/lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache 2.0"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Ruflin",
+                "homepage": "http://ruflin.com/"
+            }
+        ],
+        "description": "Elasticsearch Client",
+        "homepage": "http://elastica.io/",
+        "keywords": [
+            "client",
+            "search"
+        ]
+    },
+    {
+        "name": "phalcon/incubator",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phalcon/incubator.git",
+            "reference": "05448d4475a40c3dd867662f6e6f517e87050caf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/phalcon/incubator/zipball/05448d4475a40c3dd867662f6e6f517e87050caf",
+            "reference": "05448d4475a40c3dd867662f6e6f517e87050caf",
+            "shasum": ""
+        },
+        "require": {
+            "ext-phalcon": ">=1.2.4,<2",
+            "php": ">=5.3.6"
+        },
+        "require-dev": {
+            "codeception/codeception": "*",
+            "phpunit/phpunit": "3.7.*",
+            "squizlabs/php_codesniffer": "1.*"
+        },
+        "time": "2014-06-16 10:51:02",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Phalcon": "Library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3"
+        ],
+        "authors": [
+            {
+                "name": "Phalcon Team",
+                "email": "team@phalconphp.com"
+            }
+        ],
+        "description": "Adapters, prototypes or functionality that can be potentially incorporated to the C-framework.",
+        "homepage": "http://phalconphp.com",
+        "keywords": [
+            "framework",
+            "phalcon"
         ]
     }
 ]
