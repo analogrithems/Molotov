@@ -3,13 +3,12 @@
 namespace Molotov\Core\Models;
 
 class BaseModel extends \Phalcon\Mvc\Model{
-	protected $fields;
+	protected $fields,$di;
 
-	public function getSource()
-	{
-		$config   = 	$this->_dependencyInjector->get('config');
-		return $config['db']['table_prefix'] . parent::getSource();
-	}
+    public function onConstruct()
+    {
+        $this->di = \Phalcon\DI::getDefault();
+    }
 	
 	/*
 	* Magic functions to set the model properties based of an acl style

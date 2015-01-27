@@ -1,5 +1,12 @@
 <?php
 namespace Molotov\Modules\Auth\Controllers;
+
+use Molotov\Modules\Auth\Models\Session;
+use Molotov\Modules\Auth\Models\UserGroups;
+use Molotov\Modules\Auth\Models\User;
+use Molotov\Modules\Auth\Models\Group;
+use Molotov\Modules\Auth\Models\Role;
+
 /*
  * Standard Session Controller responsable for handeling user login requests
  */
@@ -15,9 +22,7 @@ class SessionController {
 		if(!isset(static::$instance)){
 			$inst = new static;
 			$inst->init();
-			if(!is_null($di)){
-				$inst->di = $di;
-			}
+			$inst->di = \Phalcon\DI::getDefault();
 			static::$instance = $inst;
 		}
 		return static::$instance;
@@ -40,7 +45,7 @@ class SessionController {
 				AUTH_COOKIE_SECURE
 			);
 			
-			$this->session = new \Auth\Models\Session();
+			$this->session = new Session();
 			$this->session->session = array();
 			$this->session->user_id = 0;
 			$this->session->token = $session_id;
@@ -49,7 +54,7 @@ class SessionController {
 			$this->session->save();
 		}else{
 			//we have a cookie unserialize our session
-			$this->session = \Auth\Models\Session::findFirst(
+			$this->session = Session::findFirst(
 				array(
 					"token = :token:",
 					"bind" => array(
@@ -64,7 +69,7 @@ class SessionController {
 			}
 			
 			if( $this->session->user_id > 0 ){
-				$this->user = \Auth\Models\User::findFirst(
+				$this->user = User::findFirst(
 					array(
 						"id = :id:",
 						"bind" => array(
@@ -81,11 +86,12 @@ class SessionController {
 	
 		$phpass = new \Hautelook\Phpass\PasswordHash(8, true);
 		
-		$user = \Auth\Models\User::findFirst(
+		$user = User::findFirst(
 			array(
-				"email = :email: AND enabled = 1",
+				"(display_name = :display_name: OR email = :email:) AND enabled = 1",
 				"bind" => array(
-					'email' => $login
+					'email' => $login,
+					'display_name' => $login,
 				)
 			)
 		);
@@ -99,7 +105,7 @@ class SessionController {
 			return true;
 		}else{
 			$result = $this->di->get('eventsManager')->fire( 'session:login', $this, array('login'=>$login,'pass'=>$pass) );
-			if($result && is_a($result,'\Auth\Models\User') ){
+			if($result && is_a($result,'Molotov\Auth\Models\User') ){
 				$this->session->user_id = $result->id;
 				$this->session->save();
 				$this->user = $result;
@@ -159,15 +165,15 @@ class SessionController {
 			if( $this->groupRoles ){
 				return $this->groupRoles;
 			}else{
-				$groupRoles =  \Auth\Models\UserGroups::find(array(
+				$groupRoles = UserGroups::find(array(
 					" user_id = :user_id: ".
 					'bind'=>array(
 						'user_id'=>$this->session->user_id
 					)
 				));
 				foreach( $groupRoles as $gr ){
-					$group = \Auth\Models\Group::findFirst($gr->group_id);
-					$group->role = \Auth\Models\Role::findFirst($gr->role_id);
+					$group = Group::findFirst($gr->group_id);
+					$group->role = Role::findFirst($gr->role_id);
 					$group->role->group_id = $gr->group_id;
 					$group->role->capabilities = $group->role->getCapabilites();
 					$this->groupRoles[] = $group;

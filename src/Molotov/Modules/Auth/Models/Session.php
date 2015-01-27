@@ -28,7 +28,7 @@ class Session extends BaseModel{
 	
 	public function afterFetch()
 	{
-		if( is_json($this->session) ) $this->session = json_decode($this->session,1);
+		if( $this->di->get('utils')->is_json($this->session) ) $this->session = json_decode($this->session,1);
 	}
 	
 	function __destruct()

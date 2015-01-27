@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Phalcon\\Utils\\' => array($vendorDir . '/ovr/phalcon-pretty-exceptions/Library/Phalcon/Utils'),
+    'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Elastica\\Test\\' => array($vendorDir . '/ruflin/elastica/test/lib/Elastica/Test'),
+    'Elastica\\' => array($vendorDir . '/ruflin/elastica/lib/Elastica'),
 );

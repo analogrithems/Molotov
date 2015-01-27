@@ -6,7 +6,7 @@ namespace Molotov\Modules\Auth\Controllers;
  
 use Molotov\Core\Controllers\BaseController;
 use Molotov\Modules\Auth\Models\User;
-use Molotov\Modules\Auth\Auth\Models\EmailActivations;
+use Molotov\Modules\Auth\Models\EmailActivations;
 
 
 class UserController extends BaseController{
@@ -15,7 +15,7 @@ class UserController extends BaseController{
 		$passwordHasher = new \Hautelook\Phpass\PasswordHash(8, true);
 		$_user = new User();
 		$_user->email = strtolower($args['email']);
-		$_user->display_name = $args['email'];
+		$_user->display_name = $args['display_name'];
 		$_user->password = $passwordHasher->HashPassword($args['password']);
 		$_user->created = date('Y-m-d H:i:s');
 		$_user->enabled = 0;
@@ -34,7 +34,7 @@ class UserController extends BaseController{
 	
 	public function action_activateUser( $args ){
 		$activation = EmailActivations::findFirst(array(
-			"used = 0 AND activation_key = :activation_key:",
+			"used = 0 AND activation_key = :activation_key: AND type = 'signup'",
 			"bind" => array(
 				"activation_key" => $args['activation_key']
 			)
@@ -42,7 +42,7 @@ class UserController extends BaseController{
 		if($activation){
 			$user = User::findFirst(
 				array(
-					"enabled=0 AND id= :id: AND type = 'signup'", 
+					"enabled=0 AND id= :id:", 
 					"bind"=>
 						array(
 							"id"=>$activation->user_id
@@ -74,19 +74,22 @@ class UserController extends BaseController{
 		    $email = $view->render(
 		    	'Email/addUser',
 		    	array(
-		    		'user'=>$_user,
+		    		'user'=>$user,
 		    		'activation'=>$activation,
 		    		'config'=>$this->di->get('config')
 		    	)
 		    );
+		    $transport = \Swift_SendmailTransport::newInstance('/usr/sbin/sendmail -bs');
+		    $mailer = \Swift_Mailer::newInstance($transport);
 			$message = \Swift_Message::newInstance()
 				->setSubject('Account Verification Request')
 				->setFrom(array(AUTH_FROM_EMAIL))
 				->setTo(array($user->email=>$user->display_name))
 				//TODO get template returned here as email template
-				->setBody(strip_tags($mail))
+				->setBody(strip_tags($email))
 				->addPart($email, 'text/html');
-			return true;
+			$result = $mailer->send($message);
+			return $result;
 		}
 		return false;
 	}
@@ -119,6 +122,8 @@ class UserController extends BaseController{
 				    'config'=>$this->di->get('config')
 			    )
 			);
+			$transport = \Swift_SendmailTransport::newInstance('/usr/sbin/sendmail -bs');
+			$mailer = \Swift_Mailer::newInstance($transport);
 			$message = \Swift_Message::newInstance()
 				->setSubject('Password Reset Request')
 				->setFrom(array(AUTH_FROM_EMAIL))
@@ -126,7 +131,9 @@ class UserController extends BaseController{
 				//TODO get template returned here as email template
 				->setBody(strip_tags($mail))
 				->addPart($email, 'text/html');
-			return true;
+				
+			$result = $mailer->send($message);
+			return $result;
 		}
 		return false;
 	}

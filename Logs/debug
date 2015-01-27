@@ -1,18 +1,8 @@
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00043010711669922
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] DESCRIBE `session` | Query Time: 0.00095605850219727
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0010659694671631
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.001349925994873
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] DESCRIBE `user` | Query Time: 0.0017609596252441
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0018520355224609
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.0021331310272217
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] DESCRIBE `usergroups` | Query Time: 0.0025372505187988
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.0026183128356934
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='group' | Query Time: 0.0029294490814209
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] DESCRIBE `group` | Query Time: 0.0032806396484375
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `group`.`id`, `group`.`name` FROM `group` WHERE `group`.`id` = :0 LIMIT 1 | Query Time: 0.0033667087554932
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='role' | Query Time: 0.0036475658416748
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] DESCRIBE `role` | Query Time: 0.0040125846862793
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `role`.`id`, `role`.`name`, `role`.`owner_id` FROM `role` WHERE `role`.`id` = :0 LIMIT 1 | Query Time: 0.0040996074676514
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `group`.`id`, `group`.`name` FROM `group` WHERE `group`.`id` = :0 LIMIT 1 | Query Time: 0.0041835308074951
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] SELECT `role`.`id`, `role`.`name`, `role`.`owner_id` FROM `role` WHERE `role`.`id` = :0 LIMIT 1 | Query Time: 0.0042686462402344
-[Fri, 04 Oct 13 18:37:01 -1000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0060205459594727
+[Sun, 25 Jan 15 09:50:22 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:54:31 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:55:22 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:55:23 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:56:10 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:57:26 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:57:35 +0000][ERROR] Uncaught exception: The callback is invalid.
+[Sun, 25 Jan 15 09:58:06 +0000][ERROR] Uncaught exception: The callback is invalid.

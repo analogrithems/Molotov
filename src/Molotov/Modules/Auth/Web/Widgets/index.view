@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Account Management</title>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<?php $this->assets->outputJs('jsHeader') ?>
+	<?php $this->assets->outputCss('cssHeader') ?>
+
+    </head>
+    <body style="margin: 0;">
+
+
+<!-- Start of Dynamic pages -->
+
+<?php include_once('login.phtml'); ?>
+
+<?php include_once('passwordResetRequest.phtml'); ?>
+
+<?php include_once('passwordReset.phtml'); ?>
+
+<?php include_once('signup.phtml'); ?>
+
+<?php include_once('dashboard.phtml'); ?>
+
+<!-- End of Dynamic pages -->
+
+    </body>
+<html>	

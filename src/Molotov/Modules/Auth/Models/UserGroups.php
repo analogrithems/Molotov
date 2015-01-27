@@ -17,8 +17,7 @@ class UserGroups extends BaseModel{
 	
 	public function getSource()
 	{
-		$config   = 	$this->_dependencyInjector->get('config');
-		return $config['db']['table_prefix'] . 'usergroups';
+		return 'usergroups';
 	}
 
 	
