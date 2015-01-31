@@ -5,7 +5,8 @@ namespace Molotov\Modules\Auth\Controllers;
  */
 use Molotov\Modules\Auth\Controllers\CapabilityController;
 use Molotov\Modules\Auth\Controllers\GroupController;
-use Molotov\Modules\Auth\Controllers\RoleController; 
+use Molotov\Modules\Auth\Controllers\RoleController;
+use Molotov\Modules\Auth\Controllers\UserController;
 use Molotov\Core\Controllers\BaseController;
 use Molotov\Modules\Capability;
 
@@ -63,7 +64,7 @@ class AuthController extends BaseController{
 		$args['email'] = $this->di->get('request')->get('email');
 		$args['password']= $this->di->get('request')->get('password');
 		$args['display_name']= $this->di->get('request')->get('display_name');
-		$_user = new Molotov\Modules\Auth\Controllers\UserController();
+		$_user = new UserController();
 		$result = $_user->action_addUser($args);
 		return $result;
 		
@@ -76,7 +77,7 @@ class AuthController extends BaseController{
 		
 		$args['email'] = $this->di->get('request')->get('email');
 		
-		$_user = new Molotov\Modules\Auth\Controllers\UserController();
+		$_user = new UserController();
 		$result = $_user->action_passwordResetRequest($args);
 		return $result;
 		
@@ -122,7 +123,7 @@ class AuthController extends BaseController{
 		
 		$args['email'] = $this->di->get('request')->get('email');
 		$args['activation_key']= $this->di->get('request')->get('activation_key');
-		$user = new Molotov\Modules\Auth\Controllers\UserController();
+		$user = new UserController();
 		$result = $user->action_activateUser($args);
 		return $result;
 	}

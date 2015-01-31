@@ -28,7 +28,6 @@ class Email
 	public static function realSendEmail ( $email ){
 		$di = \Phalcon\DI::getDefault();
 		$mail = new \PHPMailer();
-
 		$mail->addAddress($email['to']);
 		$mail->FromName = 'Molotov';
 		$mail->From = 'no-reply@asynonymous.com';

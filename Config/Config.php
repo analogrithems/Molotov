@@ -25,5 +25,6 @@ return array(
 	'queue_host'=> 'localhost',
 	'debug'=>false,
 	'default_layout'=> '/web/default_layout/Common/',
+	'test_email'=>'aaron.collinsa@gmail.com',
 	'cache'=>APP_ROOT_DIR.'/web/cache'
 );

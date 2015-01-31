@@ -1,694 +1,281 @@
-[Sun, 25 Jan 15 10:02:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.026902914047241
-[Sun, 25 Jan 15 10:02:21 +0000][INFO] DESCRIBE `session` | Query Time: 0.029268980026245
-[Sun, 25 Jan 15 10:02:21 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.065962076187134
-[Sun, 25 Jan 15 10:19:19 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00065183639526367
-[Sun, 25 Jan 15 10:19:19 +0000][INFO] DESCRIBE `session` | Query Time: 0.0024678707122803
-[Sun, 25 Jan 15 10:19:19 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.003098726272583
-[Sun, 25 Jan 15 10:24:39 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0009160041809082
-[Sun, 25 Jan 15 10:24:39 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021600723266602
-[Sun, 25 Jan 15 10:24:39 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027081966400146
-[Sun, 25 Jan 15 10:30:22 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0015430450439453
-[Sun, 25 Jan 15 10:30:22 +0000][INFO] DESCRIBE `session` | Query Time: 0.0031290054321289
-[Sun, 25 Jan 15 10:30:22 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0035278797149658
-[Sun, 25 Jan 15 10:31:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0013859272003174
-[Sun, 25 Jan 15 10:31:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.0029630661010742
-[Sun, 25 Jan 15 10:31:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0033831596374512
-[Sun, 25 Jan 15 10:35:14 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00075507164001465
-[Sun, 25 Jan 15 10:35:14 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019340515136719
-[Sun, 25 Jan 15 10:35:14 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.002324104309082
-[Sun, 25 Jan 15 10:35:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00089502334594727
-[Sun, 25 Jan 15 10:35:51 +0000][INFO] DESCRIBE `session` | Query Time: 0.002518892288208
-[Sun, 25 Jan 15 10:35:51 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0031099319458008
-[Sun, 25 Jan 15 10:38:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0014522075653076
-[Sun, 25 Jan 15 10:38:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.0027172565460205
-[Sun, 25 Jan 15 10:38:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032820701599121
-[Sun, 25 Jan 15 10:40:47 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00082182884216309
-[Sun, 25 Jan 15 10:40:47 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020549297332764
-[Sun, 25 Jan 15 10:40:47 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.002551794052124
-[Sun, 25 Jan 15 10:41:33 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00086808204650879
-[Sun, 25 Jan 15 10:41:33 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021660327911377
-[Sun, 25 Jan 15 10:41:33 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026040077209473
-[Sun, 25 Jan 15 10:41:38 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00075793266296387
-[Sun, 25 Jan 15 10:41:38 +0000][INFO] DESCRIBE `session` | Query Time: 0.00187087059021
-[Sun, 25 Jan 15 10:41:38 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022459030151367
-[Sun, 25 Jan 15 11:06:13 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0012581348419189
-[Sun, 25 Jan 15 11:06:13 +0000][INFO] DESCRIBE `session` | Query Time: 0.002615213394165
-[Sun, 25 Jan 15 11:06:13 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032970905303955
-[Sun, 25 Jan 15 11:07:24 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010349750518799
-[Sun, 25 Jan 15 11:07:24 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020120143890381
-[Sun, 25 Jan 15 11:07:24 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0024018287658691
-[Sun, 25 Jan 15 11:07:24 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014069795608521
-[Sun, 25 Jan 15 11:13:22 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00072693824768066
-[Sun, 25 Jan 15 11:13:22 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019299983978271
-[Sun, 25 Jan 15 11:13:22 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023128986358643
-[Sun, 25 Jan 15 11:13:22 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014776706695557
-[Sun, 25 Jan 15 11:13:24 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00063896179199219
-[Sun, 25 Jan 15 11:13:24 +0000][INFO] DESCRIBE `session` | Query Time: 0.001708984375
-[Sun, 25 Jan 15 11:13:24 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0020689964294434
-[Sun, 25 Jan 15 11:13:24 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.012957096099854
-[Sun, 25 Jan 15 11:18:18 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00085878372192383
-[Sun, 25 Jan 15 11:18:18 +0000][INFO] DESCRIBE `session` | Query Time: 0.001734733581543
-[Sun, 25 Jan 15 11:18:18 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0021505355834961
-[Sun, 25 Jan 15 11:18:18 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0065665245056152
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0007331371307373
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018181800842285
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023043155670166
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.013945341110229
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0015029907226562
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] DESCRIBE `session` | Query Time: 0.002979040145874
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032742023468018
-[Sun, 25 Jan 15 11:20:13 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.02350115776062
-[Sun, 25 Jan 15 11:20:18 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0011470317840576
-[Sun, 25 Jan 15 11:20:18 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018219947814941
-[Sun, 25 Jan 15 11:20:18 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022900104522705
-[Sun, 25 Jan 15 11:20:18 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016571044921875
-[Sun, 25 Jan 15 11:20:49 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00068807601928711
-[Sun, 25 Jan 15 11:20:49 +0000][INFO] DESCRIBE `session` | Query Time: 0.0015740394592285
-[Sun, 25 Jan 15 11:20:49 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032820701599121
-[Sun, 25 Jan 15 11:20:49 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0078389644622803
-[Sun, 25 Jan 15 11:20:53 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00068402290344238
-[Sun, 25 Jan 15 11:20:53 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018620491027832
-[Sun, 25 Jan 15 11:20:53 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0037181377410889
-[Sun, 25 Jan 15 11:20:53 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.029871940612793
-[Sun, 25 Jan 15 11:21:30 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00084400177001953
-[Sun, 25 Jan 15 11:21:30 +0000][INFO] DESCRIBE `session` | Query Time: 0.0022740364074707
-[Sun, 25 Jan 15 11:21:30 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.017377853393555
-[Sun, 25 Jan 15 11:21:30 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.02992582321167
-[Sun, 25 Jan 15 11:22:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010998249053955
-[Sun, 25 Jan 15 11:22:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.0030789375305176
-[Sun, 25 Jan 15 11:22:25 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.01410984992981
-[Sun, 25 Jan 15 11:22:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017278909683228
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00050520896911621
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] DESCRIBE `session` | Query Time: 0.0013282299041748
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0016732215881348
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.010470151901245
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00083613395690918
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019161701202393
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022821426391602
-[Sun, 25 Jan 15 11:23:02 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016141176223755
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0016000270843506
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.002993106842041
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0033760070800781
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016855001449585
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00085306167602539
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020740032196045
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0024809837341309
-[Sun, 25 Jan 15 11:23:43 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014532089233398
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00071978569030762
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] DESCRIBE `session` | Query Time: 0.0033998489379883
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0041649341583252
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016012907028198
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00084114074707031
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018889904022217
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.003026008605957
-[Sun, 25 Jan 15 11:24:55 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.01537299156189
-[Sun, 25 Jan 15 11:24:58 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00074005126953125
-[Sun, 25 Jan 15 11:24:58 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021688938140869
-[Sun, 25 Jan 15 11:24:58 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0025649070739746
-[Sun, 25 Jan 15 11:24:59 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.020982980728149
-[Sun, 25 Jan 15 11:24:59 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00085616111755371
-[Sun, 25 Jan 15 11:24:59 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018291473388672
-[Sun, 25 Jan 15 11:24:59 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0020501613616943
-[Sun, 25 Jan 15 11:24:59 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014658212661743
-[Sun, 25 Jan 15 11:25:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00067901611328125
-[Sun, 25 Jan 15 11:25:03 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020649433135986
-[Sun, 25 Jan 15 11:25:03 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0024518966674805
-[Sun, 25 Jan 15 11:25:04 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016057014465332
-[Sun, 25 Jan 15 11:25:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00085592269897461
-[Sun, 25 Jan 15 11:25:04 +0000][INFO] DESCRIBE `session` | Query Time: 0.0024380683898926
-[Sun, 25 Jan 15 11:25:04 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029940605163574
-[Sun, 25 Jan 15 11:25:04 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014705181121826
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0012450218200684
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023841857910156
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027520656585693
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.019520044326782
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00078701972961426
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018939971923828
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0028460025787354
-[Sun, 25 Jan 15 11:25:24 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016366958618164
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0019299983978271
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] DESCRIBE `session` | Query Time: 0.0035171508789062
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.004080057144165
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0089468955993652
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0012660026550293
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023319721221924
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027220249176025
-[Sun, 25 Jan 15 11:25:54 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017791032791138
-[Sun, 25 Jan 15 11:32:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00064587593078613
-[Sun, 25 Jan 15 11:32:17 +0000][INFO] DESCRIBE `session` | Query Time: 0.0017318725585938
-[Sun, 25 Jan 15 11:32:17 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0021028518676758
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010421276092529
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025839805603027
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0036640167236328
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.06278395652771
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00069117546081543
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020203590393066
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0024263858795166
-[Sun, 25 Jan 15 11:33:42 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.015167474746704
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00072193145751953
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] DESCRIBE `session` | Query Time: 0.0031180381774902
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0033688545227051
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0039918422698975
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] DESCRIBE `user` | Query Time: 0.0049488544464111
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.0056438446044922
-[Sun, 25 Jan 15 11:36:17 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.018230676651001
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00041079521179199
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] DESCRIBE `session` | Query Time: 0.0013377666473389
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.001760721206665
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0024557113647461
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] DESCRIBE `user` | Query Time: 0.0037636756896973
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.0042486190795898
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016123533248901
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.016900539398193
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.017948627471924
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.018247604370117
-[Sun, 25 Jan 15 11:36:21 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.021960496902466
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00076508522033691
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] DESCRIBE `session` | Query Time: 0.002068042755127
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023601055145264
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0029740333557129
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] DESCRIBE `user` | Query Time: 0.0040152072906494
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0044260025024414
-[Sun, 25 Jan 15 11:44:04 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.055615186691284
-[Tue, 27 Jan 15 08:57:11 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0011749267578125
-[Tue, 27 Jan 15 08:57:11 +0000][INFO] DESCRIBE `session` | Query Time: 0.0037300586700439
-[Tue, 27 Jan 15 08:57:11 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0041470527648926
-[Tue, 27 Jan 15 08:57:11 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0056440830230713
-[Tue, 27 Jan 15 08:57:11 +0000][INFO] DESCRIBE `user` | Query Time: 0.0065670013427734
-[Tue, 27 Jan 15 08:57:11 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0069830417633057
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00081706047058105
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021021366119385
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.002485990524292
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0030407905578613
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] DESCRIBE `user` | Query Time: 0.004119873046875
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0043110847473145
-[Tue, 27 Jan 15 09:07:44 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016655206680298
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00065112113952637
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018761157989502
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023159980773926
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028190612792969
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] DESCRIBE `user` | Query Time: 0.0034880638122559
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0037181377410889
-[Tue, 27 Jan 15 09:09:37 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014802932739258
-[Tue, 27 Jan 15 09:13:39 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00069093704223633
-[Tue, 27 Jan 15 09:13:39 +0000][INFO] DESCRIBE `session` | Query Time: 0.0030288696289062
-[Tue, 27 Jan 15 09:13:39 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0035359859466553
-[Tue, 27 Jan 15 09:13:39 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0042190551757812
-[Tue, 27 Jan 15 09:13:39 +0000][INFO] DESCRIBE `user` | Query Time: 0.0049488544464111
-[Tue, 27 Jan 15 09:13:39 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0052118301391602
-[Tue, 27 Jan 15 09:16:00 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0012969970703125
-[Tue, 27 Jan 15 09:16:00 +0000][INFO] DESCRIBE `session` | Query Time: 0.0029349327087402
-[Tue, 27 Jan 15 09:16:00 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032637119293213
-[Tue, 27 Jan 15 09:16:00 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0036497116088867
-[Tue, 27 Jan 15 09:16:00 +0000][INFO] DESCRIBE `user` | Query Time: 0.0047147274017334
-[Tue, 27 Jan 15 09:16:00 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0049397945404053
-[Tue, 27 Jan 15 09:20:20 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00053095817565918
-[Tue, 27 Jan 15 09:20:20 +0000][INFO] DESCRIBE `session` | Query Time: 0.0022590160369873
-[Tue, 27 Jan 15 09:20:20 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027530193328857
-[Tue, 27 Jan 15 09:20:20 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0032799243927002
-[Tue, 27 Jan 15 09:20:20 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042378902435303
-[Tue, 27 Jan 15 09:20:20 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0045697689056396
-[Tue, 27 Jan 15 09:20:45 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00039196014404297
-[Tue, 27 Jan 15 09:20:45 +0000][INFO] DESCRIBE `session` | Query Time: 0.001662015914917
-[Tue, 27 Jan 15 09:20:45 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0019180774688721
-[Tue, 27 Jan 15 09:20:45 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0024809837341309
-[Tue, 27 Jan 15 09:20:45 +0000][INFO] DESCRIBE `user` | Query Time: 0.0034370422363281
-[Tue, 27 Jan 15 09:20:45 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0037670135498047
-[Tue, 27 Jan 15 09:22:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00073504447937012
-[Tue, 27 Jan 15 09:22:55 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019080638885498
-[Tue, 27 Jan 15 09:22:55 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030441284179688
-[Tue, 27 Jan 15 09:22:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0034949779510498
-[Tue, 27 Jan 15 09:22:55 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042850971221924
-[Tue, 27 Jan 15 09:22:55 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0046050548553467
-[Tue, 27 Jan 15 09:23:16 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0007481575012207
-[Tue, 27 Jan 15 09:23:16 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019559860229492
-[Tue, 27 Jan 15 09:23:16 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022411346435547
-[Tue, 27 Jan 15 09:23:16 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028901100158691
-[Tue, 27 Jan 15 09:23:16 +0000][INFO] DESCRIBE `user` | Query Time: 0.0038361549377441
-[Tue, 27 Jan 15 09:23:16 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.004169225692749
-[Tue, 27 Jan 15 09:23:59 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00066995620727539
-[Tue, 27 Jan 15 09:23:59 +0000][INFO] DESCRIBE `session` | Query Time: 0.0016131401062012
-[Tue, 27 Jan 15 09:23:59 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0019392967224121
-[Tue, 27 Jan 15 09:23:59 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0022873878479004
-[Tue, 27 Jan 15 09:23:59 +0000][INFO] DESCRIBE `user` | Query Time: 0.0036294460296631
-[Tue, 27 Jan 15 09:23:59 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0038695335388184
-[Tue, 27 Jan 15 09:25:47 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00067496299743652
-[Tue, 27 Jan 15 09:25:47 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023679733276367
-[Tue, 27 Jan 15 09:25:47 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027978420257568
-[Tue, 27 Jan 15 09:25:47 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.00327467918396
-[Tue, 27 Jan 15 09:25:47 +0000][INFO] DESCRIBE `user` | Query Time: 0.0040147304534912
-[Tue, 27 Jan 15 09:25:47 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0043628215789795
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00069594383239746
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] DESCRIBE `session` | Query Time: 0.0027780532836914
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0033309459686279
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0039458274841309
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] DESCRIBE `user` | Query Time: 0.0049848556518555
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0052578449249268
-[Tue, 27 Jan 15 09:30:15 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.052795648574829
-[Tue, 27 Jan 15 09:44:14 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0008549690246582
-[Tue, 27 Jan 15 09:44:14 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021400451660156
-[Tue, 27 Jan 15 09:44:14 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026919841766357
-[Tue, 27 Jan 15 09:44:14 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0031650066375732
-[Tue, 27 Jan 15 09:44:14 +0000][INFO] DESCRIBE `user` | Query Time: 0.0041689872741699
-[Tue, 27 Jan 15 09:44:14 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0050790309906006
-[Tue, 27 Jan 15 09:44:15 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0085370540618896
-[Tue, 27 Jan 15 09:45:31 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00075602531433105
-[Tue, 27 Jan 15 09:45:31 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019550323486328
-[Tue, 27 Jan 15 09:45:31 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.002269983291626
-[Tue, 27 Jan 15 09:45:31 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028769969940186
-[Tue, 27 Jan 15 09:45:31 +0000][INFO] DESCRIBE `user` | Query Time: 0.0039379596710205
-[Tue, 27 Jan 15 09:45:31 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0044519901275635
-[Tue, 27 Jan 15 09:45:42 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00077509880065918
-[Tue, 27 Jan 15 09:45:42 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020060539245605
-[Tue, 27 Jan 15 09:45:42 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026521682739258
-[Tue, 27 Jan 15 09:45:42 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0032303333282471
-[Tue, 27 Jan 15 09:45:42 +0000][INFO] DESCRIBE `user` | Query Time: 0.004521369934082
-[Tue, 27 Jan 15 09:45:42 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0047602653503418
-[Tue, 27 Jan 15 09:47:27 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00083112716674805
-[Tue, 27 Jan 15 09:47:27 +0000][INFO] DESCRIBE `session` | Query Time: 0.002197265625
-[Tue, 27 Jan 15 09:47:27 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027422904968262
-[Tue, 27 Jan 15 09:47:27 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0032012462615967
-[Tue, 27 Jan 15 09:47:27 +0000][INFO] DESCRIBE `user` | Query Time: 0.0041983127593994
-[Tue, 27 Jan 15 09:47:27 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0045254230499268
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00056695938110352
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] DESCRIBE `session` | Query Time: 0.002716064453125
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030159950256348
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0033590793609619
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] DESCRIBE `user` | Query Time: 0.005047082901001
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.005465030670166
-[Tue, 27 Jan 15 09:48:08 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.040170192718506
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0005650520324707
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] DESCRIBE `session` | Query Time: 0.0012269020080566
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0016329288482666
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.002094030380249
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] DESCRIBE `user` | Query Time: 0.0034410953521729
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0038702487945557
-[Tue, 27 Jan 15 09:49:39 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.007744312286377
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00075793266296387
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020139217376709
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023958683013916
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0029020309448242
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] DESCRIBE `user` | Query Time: 0.0038070678710938
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0042061805725098
-[Tue, 27 Jan 15 09:50:07 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0079572200775146
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0013649463653564
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025520324707031
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029411315917969
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.003399133682251
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] DESCRIBE `user` | Query Time: 0.0043950080871582
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0047650337219238
-[Tue, 27 Jan 15 09:51:12 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.00913405418396
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00047612190246582
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021321773529053
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0025131702423096
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0030941963195801
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] DESCRIBE `user` | Query Time: 0.0040113925933838
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0044255256652832
-[Tue, 27 Jan 15 09:56:17 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017333507537842
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00075602531433105
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] DESCRIBE `session` | Query Time: 0.001986026763916
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.00248122215271
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0027031898498535
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] DESCRIBE `user` | Query Time: 0.004265308380127
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0046083927154541
-[Tue, 27 Jan 15 09:56:55 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.025191307067871
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00067496299743652
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] DESCRIBE `session` | Query Time: 0.0017158985137939
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029048919677734
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0033407211303711
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] DESCRIBE `user` | Query Time: 0.0045278072357178
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0048527717590332
-[Tue, 27 Jan 15 09:57:07 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0086488723754883
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010919570922852
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] DESCRIBE `session` | Query Time: 0.0024340152740479
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032980442047119
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0039420127868652
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] DESCRIBE `user` | Query Time: 0.005000114440918
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0057780742645264
-[Tue, 27 Jan 15 09:58:48 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0093340873718262
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00072908401489258
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] DESCRIBE `session` | Query Time: 0.0024900436401367
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030179023742676
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0035688877105713
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] DESCRIBE `user` | Query Time: 0.0044848918914795
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0055859088897705
-[Tue, 27 Jan 15 09:59:01 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.010920763015747
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00086498260498047
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023009777069092
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026798248291016
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0030949115753174
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] DESCRIBE `user` | Query Time: 0.003943920135498
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0042860507965088
-[Tue, 27 Jan 15 09:59:10 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0080699920654297
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00074291229248047
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020308494567871
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0025639533996582
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0030031204223633
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] DESCRIBE `user` | Query Time: 0.0039780139923096
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0043721199035645
-[Tue, 27 Jan 15 09:59:23 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0080032348632812
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0006859302520752
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018589496612549
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029799938201904
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0033478736877441
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] DESCRIBE `user` | Query Time: 0.0048098564147949
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0051937103271484
-[Tue, 27 Jan 15 09:59:38 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0089116096496582
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00087404251098633
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023031234741211
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0035462379455566
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.004143238067627
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] DESCRIBE `user` | Query Time: 0.0050561428070068
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0054862499237061
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017234325408936
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0011680126190186
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023050308227539
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027661323547363
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0034830570220947
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] DESCRIBE `user` | Query Time: 0.0047430992126465
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0057322978973389
-[Tue, 27 Jan 15 10:00:43 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017543315887451
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00081110000610352
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025222301483154
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030090808868408
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0035250186920166
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042641162872314
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0056662559509277
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.054488182067871
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0012879371643066
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] DESCRIBE `session` | Query Time: 0.0029430389404297
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0035760402679443
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0096230506896973
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] DESCRIBE `user` | Query Time: 0.010479927062988
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.010821104049683
-[Tue, 27 Jan 15 10:02:03 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.022363185882568
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00071883201599121
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] DESCRIBE `session` | Query Time: 0.001945972442627
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023207664489746
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028345584869385
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] DESCRIBE `user` | Query Time: 0.0037617683410645
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0039918422698975
-[Tue, 27 Jan 15 10:02:22 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0081439018249512
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0015549659729004
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] DESCRIBE `session` | Query Time: 0.0027728080749512
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0036478042602539
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0042006969451904
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] DESCRIBE `user` | Query Time: 0.0051577091217041
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0055036544799805
-[Tue, 27 Jan 15 10:02:47 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017437696456909
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00078296661376953
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025477409362793
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0028345584869385
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0036296844482422
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] DESCRIBE `user` | Query Time: 0.00445556640625
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0050616264343262
-[Tue, 27 Jan 15 10:02:57 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.042836666107178
-[Tue, 27 Jan 15 10:04:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00052094459533691
-[Tue, 27 Jan 15 10:04:04 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025019645690918
-[Tue, 27 Jan 15 10:04:04 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029878616333008
-[Tue, 27 Jan 15 10:04:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0033187866210938
-[Tue, 27 Jan 15 10:04:04 +0000][INFO] DESCRIBE `user` | Query Time: 0.0048367977142334
-[Tue, 27 Jan 15 10:04:04 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0051789283752441
-[Tue, 27 Jan 15 10:04:06 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00074195861816406
-[Tue, 27 Jan 15 10:04:06 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018010139465332
-[Tue, 27 Jan 15 10:04:06 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022449493408203
-[Tue, 27 Jan 15 10:04:06 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0027728080749512
-[Tue, 27 Jan 15 10:04:06 +0000][INFO] DESCRIBE `user` | Query Time: 0.0033059120178223
-[Tue, 27 Jan 15 10:04:06 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0039267539978027
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0008399486541748
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.001666784286499
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0019388198852539
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0021638870239258
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.002692699432373
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0031957626342773
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0058586597442627
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00072598457336426
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00064897537231445
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019009113311768
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00054192543029785
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00056600570678711
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.01307487487793
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00072622299194336
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.019247055053711
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.020812034606934
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.02132511138916
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.023601055145264
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.016929864883423
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.017492771148682
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.011593103408813
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.021368980407715
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.02173900604248
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.022305965423584
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.034514188766479
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.034737110137939
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.027963876724243
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.019750833511353
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.020825862884521
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.044044017791748
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.033152103424072
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.041100978851318
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.053820371627808
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.035723686218262
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.039515018463135
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.037187814712524
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.041297912597656
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.044989109039307
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.057536840438843
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.058511734008789
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.058941841125488
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.051872253417969
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.043446779251099
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.074586153030396
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.075527191162109
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.062611818313599
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.085569858551025
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0070250034332275
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.0092928409576416
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0097157955169678
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.01093578338623
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.012088775634766
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.073293924331665
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.081620216369629
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.021216869354248
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0006718635559082
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.034421920776367
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.011201858520508
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.011746883392334
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.012298822402954
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.01334285736084
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.013680696487427
-[Tue, 27 Jan 15 10:04:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.025966644287109
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00061702728271484
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] DESCRIBE `session` | Query Time: 0.0021190643310547
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0025589466094971
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0031769275665283
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042309761047363
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0047028064727783
-[Tue, 27 Jan 15 10:04:30 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017682790756226
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00081396102905273
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020427703857422
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0034048557281494
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0041389465332031
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] DESCRIBE `user` | Query Time: 0.0051918029785156
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0056347846984863
-[Tue, 27 Jan 15 10:06:06 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.053741931915283
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00085806846618652
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] DESCRIBE `session` | Query Time: 0.0031061172485352
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0035111904144287
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0041830539703369
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] DESCRIBE `user` | Query Time: 0.0051031112670898
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0056192874908447
-[Tue, 27 Jan 15 10:06:26 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.060168504714966
-[Tue, 27 Jan 15 10:07:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00087094306945801
-[Tue, 27 Jan 15 10:07:03 +0000][INFO] DESCRIBE `session` | Query Time: 0.0024018287658691
-[Tue, 27 Jan 15 10:07:03 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029799938201904
-[Tue, 27 Jan 15 10:07:03 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0039031505584717
-[Tue, 27 Jan 15 10:07:03 +0000][INFO] DESCRIBE `user` | Query Time: 0.0049471855163574
-[Tue, 27 Jan 15 10:07:03 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.005378246307373
-[Tue, 27 Jan 15 10:07:04 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.061718225479126
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010910034179688
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] DESCRIBE `session` | Query Time: 0.0026028156280518
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030879974365234
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0036869049072266
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] DESCRIBE `user` | Query Time: 0.005098819732666
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0054538249969482
-[Tue, 27 Jan 15 10:07:14 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0090837478637695
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00080299377441406
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] DESCRIBE `session` | Query Time: 0.0020220279693604
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0024030208587646
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028300285339355
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042488574981689
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0046787261962891
-[Tue, 27 Jan 15 10:07:19 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0085608959197998
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0012378692626953
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023558139801025
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030927658081055
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0035586357116699
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] DESCRIBE `user` | Query Time: 0.0054225921630859
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.005833625793457
-[Tue, 27 Jan 15 10:11:20 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0097715854644775
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00077700614929199
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] DESCRIBE `session` | Query Time: 0.0035970211029053
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0041069984436035
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0046789646148682
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] DESCRIBE `user` | Query Time: 0.0057089328765869
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.006112813949585
-[Tue, 27 Jan 15 10:21:52 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017760753631592
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00084304809570312
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023062229156494
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026812553405762
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0031461715698242
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] DESCRIBE `user` | Query Time: 0.0040421485900879
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0044393539428711
-[Tue, 27 Jan 15 10:23:21 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.018149375915527
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00050497055053711
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025160312652588
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0028839111328125
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0034110546112061
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] DESCRIBE `user` | Query Time: 0.0041909217834473
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0045979022979736
-[Tue, 27 Jan 15 10:25:53 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.015967845916748
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00066018104553223
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] DESCRIBE `session` | Query Time: 0.0017232894897461
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0021092891693115
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0032391548156738
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042991638183594
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0047352313995361
-[Tue, 27 Jan 15 10:25:57 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016728162765503
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0007939338684082
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] DESCRIBE `session` | Query Time: 0.0035560131072998
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0039470195770264
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0044980049133301
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] DESCRIBE `user` | Query Time: 0.0053529739379883
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0057258605957031
-[Tue, 27 Jan 15 10:31:35 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.051414966583252
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00061488151550293
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] DESCRIBE `session` | Query Time: 0.001572847366333
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0019557476043701
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.002422571182251
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] DESCRIBE `user` | Query Time: 0.0037624835968018
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0040783882141113
-[Tue, 27 Jan 15 10:31:42 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016786575317383
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00084710121154785
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] DESCRIBE `session` | Query Time: 0.0022399425506592
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026259422302246
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.003220796585083
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] DESCRIBE `user` | Query Time: 0.0042028427124023
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0046608448028564
-[Tue, 27 Jan 15 10:44:21 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.017237663269043
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0006558895111084
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] DESCRIBE `session` | Query Time: 0.0029439926147461
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0033431053161621
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0039360523223877
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] DESCRIBE `user` | Query Time: 0.0049080848693848
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0052962303161621
-[Tue, 27 Jan 15 10:44:25 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.016507148742676
-[Tue, 27 Jan 15 10:46:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0006861686706543
-[Tue, 27 Jan 15 10:46:54 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018961429595947
-[Tue, 27 Jan 15 10:46:54 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0032401084899902
-[Tue, 27 Jan 15 10:46:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0037059783935547
-[Tue, 27 Jan 15 10:46:54 +0000][INFO] DESCRIBE `user` | Query Time: 0.004688024520874
-[Tue, 27 Jan 15 10:46:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0048401355743408
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00056791305541992
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] DESCRIBE `session` | Query Time: 0.002094030380249
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026009082794189
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0029568672180176
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] DESCRIBE `user` | Query Time: 0.0043487548828125
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0046947002410889
-[Tue, 27 Jan 15 10:47:50 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.062066555023193
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00071501731872559
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] DESCRIBE `session` | Query Time: 0.002140998840332
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0026187896728516
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0032339096069336
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] DESCRIBE `user` | Query Time: 0.004194974899292
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0045039653778076
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.0051319599151611
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.0071017742156982
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.0073587894439697
-[Tue, 27 Jan 15 10:47:51 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.019186735153198
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00080299377441406
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] DESCRIBE `session` | Query Time: 0.0026450157165527
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0030272006988525
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0034770965576172
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] DESCRIBE `user` | Query Time: 0.004472017288208
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0048401355743408
-[Tue, 27 Jan 15 10:48:28 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.044035196304321
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0005028247833252
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] DESCRIBE `session` | Query Time: 0.0016028881072998
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0019738674163818
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0025670528411865
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] DESCRIBE `user` | Query Time: 0.0034840106964111
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0038189888000488
-[Tue, 27 Jan 15 10:50:57 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.044258832931519
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00096678733825684
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019068717956543
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0029408931732178
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0035178661346436
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] DESCRIBE `user` | Query Time: 0.0043950080871582
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0057721138000488
-[Tue, 27 Jan 15 10:51:11 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.036808252334595
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00076103210449219
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] DESCRIBE `session` | Query Time: 0.0043878555297852
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0048718452453613
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0053777694702148
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] DESCRIBE `user` | Query Time: 0.0061976909637451
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0068306922912598
-[Tue, 27 Jan 15 10:53:37 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.018651723861694
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00074291229248047
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019838809967041
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023598670959473
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028769969940186
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] DESCRIBE `user` | Query Time: 0.0041689872741699
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0046601295471191
-[Tue, 27 Jan 15 10:56:57 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.047037124633789
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00078296661376953
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019938945770264
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023958683013916
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0028278827667236
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] DESCRIBE `user` | Query Time: 0.003748893737793
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0042097568511963
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.0055928230285645
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.006152868270874
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.0067818164825439
-[Tue, 27 Jan 15 10:56:58 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.018929958343506
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00059604644775391
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] DESCRIBE `session` | Query Time: 0.0022249221801758
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027158260345459
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0032517910003662
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] DESCRIBE `user` | Query Time: 0.004030704498291
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.0043597221374512
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.05408787727356
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.056624889373779
-[Tue, 27 Jan 15 10:57:04 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.060747861862183
-[Tue, 27 Jan 15 10:57:10 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00069594383239746
-[Tue, 27 Jan 15 10:57:10 +0000][INFO] DESCRIBE `session` | Query Time: 0.0016570091247559
-[Tue, 27 Jan 15 10:57:10 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0020480155944824
-[Tue, 27 Jan 15 10:57:11 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.075882911682129
-[Tue, 27 Jan 15 10:57:11 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00090193748474121
-[Tue, 27 Jan 15 10:57:11 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018668174743652
-[Tue, 27 Jan 15 10:57:11 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022878646850586
-[Tue, 27 Jan 15 10:57:11 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.013582944869995
-[Tue, 27 Jan 15 11:00:30 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00084996223449707
-[Tue, 27 Jan 15 11:00:30 +0000][INFO] DESCRIBE `session` | Query Time: 0.0022587776184082
-[Tue, 27 Jan 15 11:00:30 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.002741813659668
-[Tue, 27 Jan 15 11:00:30 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.057853937149048
-[Tue, 27 Jan 15 11:02:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00062203407287598
-[Tue, 27 Jan 15 11:02:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.00223708152771
-[Tue, 27 Jan 15 11:02:43 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0027070045471191
-[Tue, 27 Jan 15 11:02:43 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.0067169666290283
-[Tue, 27 Jan 15 11:03:06 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00072979927062988
-[Tue, 27 Jan 15 11:03:06 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018508434295654
-[Tue, 27 Jan 15 11:03:06 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022809505462646
-[Tue, 27 Jan 15 11:03:06 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.014926910400391
-[Tue, 27 Jan 15 11:03:07 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00080490112304688
-[Tue, 27 Jan 15 11:03:07 +0000][INFO] DESCRIBE `session` | Query Time: 0.0019688606262207
-[Tue, 27 Jan 15 11:03:07 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0023980140686035
-[Tue, 27 Jan 15 11:03:07 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.01835298538208
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00070786476135254
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] DESCRIBE `session` | Query Time: 0.0017518997192383
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0021240711212158
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.046947956085205
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00068402290344238
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] DESCRIBE `session` | Query Time: 0.0015919208526611
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] SELECT `session`.`id`, `session`.`user_id`, `session`.`token`, `session`.`session`, `session`.`ip`, `session`.`created` FROM `session` WHERE `session`.`token` = :token LIMIT 1 | Query Time: 0.0022058486938477
-[Tue, 27 Jan 15 11:03:17 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.015747785568237
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00076389312744141
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] DESCRIBE `session` | Query Time: 0.0017459392547607
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.032740116119385
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.033346176147461
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] DESCRIBE `user` | Query Time: 0.035240173339844
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.035775184631348
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.03899621963501
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.039644241333008
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.04071831703186
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.041043519973755
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.047182559967041
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.047832489013672
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and :user_id | Query Time: 0.048229694366455
+[Sat, 31 Jan 15 12:31:27 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.048910856246948
+[Sat, 31 Jan 15 12:31:28 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.052556991577148
+[Sat, 31 Jan 15 12:31:29 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.058788776397705
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00069713592529297
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018231868743896
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.013970136642456
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.014814138412476
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] DESCRIBE `user` | Query Time: 0.016525268554688
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.016920328140259
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.02266526222229
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.023653268814087
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.024808406829834
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.025161266326904
+[Sat, 31 Jan 15 12:33:36 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.028197050094604
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.030173063278198
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.030561208724976
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.03707218170166
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.038254261016846
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.038595199584961
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.043213129043579
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.043825149536133
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.047584295272827
+[Sat, 31 Jan 15 12:33:37 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.052260398864746
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0014550685882568
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] DESCRIBE `session` | Query Time: 0.003593921661377
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.014867782592773
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.016430854797363
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] DESCRIBE `user` | Query Time: 0.017543792724609
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.017988681793213
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.021400690078735
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.022408723831177
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.023523569107056
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.023850679397583
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.028166532516479
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.032431602478027
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.036148548126221
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.040326595306396
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.040942668914795
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.041338682174683
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.046330690383911
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.04675555229187
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.052100419998169
+[Sat, 31 Jan 15 12:33:52 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.056846618652344
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010099411010742
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] DESCRIBE `session` | Query Time: 0.002202033996582
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.015643119812012
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.016435146331787
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] DESCRIBE `user` | Query Time: 0.017704963684082
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.018134832382202
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.021996974945068
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.022534132003784
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.024144172668457
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.025012254714966
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.028802156448364
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.029228210449219
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.030701160430908
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.030985116958618
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.032348155975342
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.032992124557495
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.036871194839478
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.037431240081787
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.040913343429565
+[Sat, 31 Jan 15 12:33:54 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.04353141784668
+[Sat, 31 Jan 15 12:42:37 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010941028594971
+[Sat, 31 Jan 15 12:42:37 +0000][INFO] DESCRIBE `session` | Query Time: 0.0022151470184326
+[Sat, 31 Jan 15 12:42:37 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.034032344818115
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.034846305847168
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] DESCRIBE `user` | Query Time: 0.035938501358032
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.036282539367676
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.041889667510986
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.043538570404053
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.044411420822144
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.044744491577148
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.064706563949585
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.0653076171875
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.066442728042603
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.070559740066528
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.071348905563354
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.07168173789978
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.076231718063354
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.076654672622681
+[Sat, 31 Jan 15 12:42:38 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.080684661865234
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0010619163513184
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] DESCRIBE `session` | Query Time: 0.0035989284515381
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.056750774383545
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.057498693466187
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] DESCRIBE `user` | Query Time: 0.058740615844727
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.059087514877319
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.062539577484131
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.063032627105713
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.064052581787109
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.064468622207642
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.069308519363403
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.073488473892212
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.074055433273315
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.074442625045776
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.075618505477905
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.07733154296875
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.083033561706543
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.084023475646973
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.087890625
+[Sat, 31 Jan 15 12:44:43 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.092044591903687
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.001082181930542
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] DESCRIBE `session` | Query Time: 0.0024101734161377
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.008237361907959
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0089864730834961
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] DESCRIBE `user` | Query Time: 0.01027250289917
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.010610580444336
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.022527694702148
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.024030685424805
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.025847673416138
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.026171684265137
+[Sat, 31 Jan 15 12:45:32 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.049795866012573
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.050408840179443
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.054566621780396
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.054912567138672
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.055272579193115
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.059208631515503
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.063799619674683
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.064232587814331
+[Sat, 31 Jan 15 12:45:33 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.067610740661621
+[Sat, 31 Jan 15 12:45:59 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0011539459228516
+[Sat, 31 Jan 15 12:45:59 +0000][INFO] DESCRIBE `session` | Query Time: 0.0023219585418701
+[Sat, 31 Jan 15 12:45:59 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.029691934585571
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.030911922454834
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] DESCRIBE `user` | Query Time: 0.032026767730713
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.032493829727173
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.037554740905762
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.038155794143677
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.039038896560669
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.039370059967041
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.042693138122559
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.047296047210693
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.047498226165771
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.051207065582275
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.051870107650757
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.054687023162842
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.059440135955811
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.060126066207886
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.064625024795532
+[Sat, 31 Jan 15 12:46:00 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.068684101104736
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00066089630126953
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] DESCRIBE `session` | Query Time: 0.0018129348754883
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.040742874145508
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.041594982147217
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] DESCRIBE `user` | Query Time: 0.043535947799683
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.043927907943726
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.047296047210693
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.047827005386353
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.048711061477661
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.049428939819336
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.052660942077637
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.0533127784729
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.053713798522949
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.058344841003418
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.059584617614746
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.060010671615601
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.064562797546387
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.064994812011719
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.069397926330566
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.070787906646729
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.075966835021973
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.076576709747314
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.077529668807983
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.077793598175049
+[Sat, 31 Jan 15 12:46:55 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.083397626876831
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.00069499015808105
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025999546051025
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.015513896942139
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.016366720199585
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] DESCRIBE `user` | Query Time: 0.017829895019531
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.019007921218872
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.022346973419189
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.023842096328735
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.026942253112793
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.027300357818604
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.05578351020813
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.056925535202026
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.05751371383667
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.058053731918335
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.058388710021973
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.058737754821777
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.063219785690308
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.063628673553467
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.067432641983032
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.067932844161987
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.072458744049072
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.073054790496826
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.074000835418701
+[Sat, 31 Jan 15 12:49:51 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.075878858566284
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0014438629150391
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] DESCRIBE `session` | Query Time: 0.0038189888000488
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.0081729888916016
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.0088820457458496
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] DESCRIBE `user` | Query Time: 0.0099070072174072
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.010248899459839
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.013755798339844
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.01424765586853
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.015760660171509
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.017014741897583
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.020227670669556
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.040782690048218
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.04131555557251
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.045172452926636
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.045579433441162
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.045902490615845
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.049831390380859
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.050248384475708
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.062471389770508
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.062891244888306
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.082310199737549
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.082849264144897
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.083694458007812
+[Sat, 31 Jan 15 12:51:54 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.088617324829102
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0013608932495117
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] DESCRIBE `session` | Query Time: 0.0025219917297363
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.030698776245117
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.031507730484009
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] DESCRIBE `user` | Query Time: 0.032633781433105
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.032987833023071
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.037338733673096
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.037886619567871
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.0391526222229
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.039504528045654
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.043323516845703
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.046705484390259
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.047109365463257
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.047520399093628
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.052153348922729
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.052522420883179
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.055382490158081
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.055833578109741
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.060341596603394
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.061256647109985
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.065372705459595
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.066919803619385
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.068590879440308
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.071751832962036
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.072125911712646
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] DELETE FROM `user` WHERE `id` = ? | Query Time: 0.083739042282104
+[Sat, 31 Jan 15 12:53:44 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.08831000328064
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='session' | Query Time: 0.0016558170318604
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] DESCRIBE `session` | Query Time: 0.0029687881469727
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] INSERT INTO `session` (`user_id`, `token`, `session`, `ip`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.0087888240814209
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='user' | Query Time: 0.010367631912231
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] DESCRIBE `user` | Query Time: 0.01125955581665
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 | Query Time: 0.011743545532227
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] INSERT INTO `user` (`display_name`, `email`, `password`, `enabled`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.024434566497803
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='emailactivations' | Query Time: 0.025143623352051
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] DESCRIBE `emailactivations` | Query Time: 0.026546716690063
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 | Query Time: 0.026910543441772
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] INSERT INTO `emailactivations` (`user_id`, `activation_key`, `type`, `used`, `created`) VALUES (?, ?, ?, ?, ?) | Query Time: 0.030264616012573
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT * FROM user WHERE email = :email | Query Time: 0.036014556884766
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT * FROM emailactivations WHERE type = 'signup' AND used = 0 and user_id = :user_id | Query Time: 0.036486625671387
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT `emailactivations`.`id`, `emailactivations`.`user_id`, `emailactivations`.`activation_key`, `emailactivations`.`type`, `emailactivations`.`used`, `emailactivations`.`created` FROM `emailactivations` WHERE `emailactivations`.`used` = 0 AND `emailactivations`.`activation_key` = :activation_key AND `emailactivations`.`type` = 'signup' LIMIT 1 | Query Time: 0.03697657585144
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`enabled` = 0 AND `user`.`id` = :id LIMIT 1 | Query Time: 0.037417650222778
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`email` = :0 AND `user`.`id` <> :1 | Query Time: 0.039869785308838
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] UPDATE `user` SET `display_name` = ?, `email` = ?, `password` = ?, `enabled` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.045048952102661
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT COUNT(*) AS `rowcount` FROM `emailactivations` WHERE `emailactivations`.`activation_key` = :0 AND `emailactivations`.`id` <> :1 | Query Time: 0.045567035675049
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] UPDATE `emailactivations` SET `user_id` = ?, `activation_key` = ?, `type` = ?, `used` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.065650939941406
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE (`user`.`display_name` = :display_name OR `user`.`email` = :email) AND `user`.`enabled` = 1 LIMIT 1 | Query Time: 0.066190958023071
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.072903871536255
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT IF(COUNT(*)>0, 1 , 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME`='usergroups' | Query Time: 0.073612689971924
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] DESCRIBE `usergroups` | Query Time: 0.075861692428589
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT `usergroups`.`id`, `usergroups`.`user_id`, `usergroups`.`group_id`, `usergroups`.`role_id` FROM `usergroups` | Query Time: 0.076136589050293
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] SELECT `user`.`id`, `user`.`display_name`, `user`.`email`, `user`.`password`, `user`.`enabled`, `user`.`created` FROM `user` WHERE `user`.`id` = :id LIMIT 1 | Query Time: 0.076519727706909
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] DELETE FROM `user` WHERE `id` = ? | Query Time: 0.079855918884277
+[Sat, 31 Jan 15 12:53:54 +0000][INFO] UPDATE `session` SET `user_id` = ?, `token` = ?, `session` = ?, `ip` = ?, `created` = ? WHERE `id` = ? | Query Time: 0.083164930343628

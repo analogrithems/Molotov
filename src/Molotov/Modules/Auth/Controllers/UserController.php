@@ -58,7 +58,7 @@ class UserController extends BaseController{
 
 			}
 		}
-		return array("status"=>'error',"message"=>"Activation failed");
+		return array("status"=>'error',"message"=>"Activation failed {$args['email']} != {$user->email}".print_r($activation,1));
 
 	}
 	
@@ -69,27 +69,20 @@ class UserController extends BaseController{
 		if($activation->save()){
 
 			//Email Template
-		    $view = new \Phalcon\Mvc\View\Simple();			
+		    $view = new \Phalcon\Mvc\View\Simple();
+			$view->registerEngines(array(
+			  ".view" => "Phalcon\Mvc\View\Engine\Volt",
+			));
 		    $view->setViewsDir(AUTH_MODULE_DIR.'/Views/');
+		    $view->setDI(\Phalcon\DI::getDefault());
 		    $email = $view->render(
 		    	'Email/addUser',
 		    	array(
 		    		'user'=>$user,
-		    		'activation'=>$activation,
-		    		'config'=>$this->di->get('config')
+		    		'activation'=> $this->di->get('config')['site_url'].'/Signup/#SignupActivation/'.$activation->activation_key.'/'.$user->email
 		    	)
 		    );
-		    $transport = \Swift_SendmailTransport::newInstance('/usr/sbin/sendmail -bs');
-		    $mailer = \Swift_Mailer::newInstance($transport);
-			$message = \Swift_Message::newInstance()
-				->setSubject('Account Verification Request')
-				->setFrom(array(AUTH_FROM_EMAIL))
-				->setTo(array($user->email=>$user->display_name))
-				//TODO get template returned here as email template
-				->setBody(strip_tags($email))
-				->addPart($email, 'text/html');
-			$result = $mailer->send($message);
-			return $result;
+		    return \Molotov\Core\Lib\Email::email($user->email,'Account Verification Request',$email,'From: '.AUTH_FROM_EMAIL);
 		}
 		return false;
 	}
