@@ -1,5 +1,20 @@
 <?php
-
+use Swagger\Annotations as SWG;
+/**
+ * @SWG\Info(
+ *   title="Molotov Framework",
+ *   description="This is the Molotv framework used to provide to provide high performance enterprise services",
+ *   contact="analogrithems@gmail.com",
+ *   license="Apache 2.0",
+ *   licenseUrl="http://www.apache.org/licenses/LICENSE-2.0.html"
+ * )
+ *
+ * @SWG\Authorization(
+ *   type="apiKey",
+ *	 passAs="query",
+ * 	 keyname="MOLOTOV"
+ * )
+ */
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, X-File-Type, X-File-Name, X-File-Size, Content-Type, Accept");
 header("Access-Control-Allow-Credentials:false");
@@ -26,6 +41,16 @@ $di->set('es', function() use ($config) {
 	return  new \Elastica\Client( $config['esconfig'] );
 });
 */
+
+$di->set('security', function(){
+
+    $security = new Phalcon\Security();
+
+    //Set the password hashing factor to 12 rounds
+    $security->setWorkFactor(12);
+
+    return $security;
+}, true);
 
 //event manager
 $di->setShared('eventsManager', function(){

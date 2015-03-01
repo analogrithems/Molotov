@@ -4,8 +4,12 @@ namespace Molotov\Modules\Auth\Models;
  * The capability model
  */
  
+use Swagger\Annotations as SWG;
 use Molotov\Core\Models\BaseModel;
 
+/**
+ * @SWG\Model(id="RoleCapabilites")
+ */
 class RoleCapabilites extends BaseModel{
 
 	protected $fields = array(

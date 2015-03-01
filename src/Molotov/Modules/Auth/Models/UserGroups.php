@@ -4,8 +4,13 @@ namespace Molotov\Modules\Auth\Models;
  * User Role
  */
  
+use Swagger\Annotations as SWG;
 use Molotov\Core\Models\BaseModel;
 
+
+/**
+ * @SWG\Model(id="UserGroups")
+ */
 class UserGroups extends BaseModel{
 	
 	protected $fields = array(

@@ -7,7 +7,8 @@
     "hautelook/phpass": "dev-master",
     "swiftmailer/swiftmailer": "*",
     "phalcon/incubator": "v1.3.4",
-    "ovr/phalcon-pretty-exceptions": "dev-composer"
+    "ovr/phalcon-pretty-exceptions": "dev-composer",
+    "zircote/swagger-php": "*"
   },
   "autoload": {
     "psr-0": {

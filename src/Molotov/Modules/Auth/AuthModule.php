@@ -1,9 +1,8 @@
 <?php
-
 namespace Molotov\Modules\Auth;
 
 use Molotov\Core\Abstracts\Module;
-
+ 
 class AuthModule extends Module
 {
 	protected $routes = array(
@@ -13,7 +12,7 @@ class AuthModule extends Module
 		'/Auth/Role' => 'getRole',
 		'/Auth/Group/{id}/Members' => 'getMembers',
 		'/Auth/myGroups' => 'myGroups',
-		'/Auth/Group' => 'getGroup',
+		'/Auth/Group/Add' => 'addGroup',
 		'/Auth/ActivateUser' => 'ActivateUser',
 		'/Auth/PasswordReset' => 'PasswordReset',
 		'/Auth/SessionCheck' => 'SessionCheck',

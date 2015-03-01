@@ -1,7 +1,7 @@
 <?php
 
 define("AUTH_MODULE_DIR",MODULES_DIR.'/Auth');
-define("AUTH_COOKIE_NAME",'JHANCOCK');
+define("AUTH_COOKIE_NAME",'MOLOTOV');
 define("AUTH_COOKIE_PATH",'/');
 define("AUTH_COOKIE_DOMAIN",'');
 define("AUTH_COOKIE_EXPIRE",0);

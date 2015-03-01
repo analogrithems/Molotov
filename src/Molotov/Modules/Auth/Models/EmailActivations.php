@@ -4,9 +4,42 @@ namespace Molotov\Modules\Auth\Models;
  * The Media used by our system
  */
  
+use Swagger\Annotations as SWG;
 use Molotov\Core\Models\BaseModel;
 
+
+/**
+ * @SWG\Model(id="EmailActivations")
+ */
 class EmailActivations extends BaseModel{
+
+	/**
+	 * @SWG\Property(name="id",type="integer",format="int64")
+	 */
+	 
+	/**
+	 * @SWG\Property(name="user_id",type="integer",format="int64")
+	 */
+	 
+	/**
+	 * @SWG\Property(name="activation_key",type="string")
+	 */
+
+	/**
+	 * @SWG\Property(name="type",type="string",enum="['verify','passwordreset','signup']")
+	 */
+	 
+	/**
+	 * @SWG\Property(name="created",type="string",description="standard SQL timestamp in YYYY-MM-DD HH:MM:SS format")
+	 */
+	 
+    /**
+     * @SWG\Property(
+     *   name="used", type="integer", format="int32",
+     *   description="Activation Key Status",
+     *   enum="{'0':'unused','1':'used'}"
+     * )
+     */
 
 	public $fields = array(
 		'id',

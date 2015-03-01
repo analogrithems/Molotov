@@ -1,3 +1,4 @@
+{JS src/Molotov/Modules/Auth/Web/js/group.js}
 <div id="groupManager" data-bind="if: show">
     
     <div class="segment">

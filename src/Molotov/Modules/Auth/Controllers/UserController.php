@@ -12,11 +12,10 @@ use Molotov\Modules\Auth\Models\EmailActivations;
 class UserController extends BaseController{
 
 	public function action_addUser( $args ){
-		$passwordHasher = new \Hautelook\Phpass\PasswordHash(8, true);
 		$_user = new User();
 		$_user->email = strtolower($args['email']);
 		$_user->display_name = $args['display_name'];
-		$_user->password = $passwordHasher->HashPassword($args['password']);
+		$_user->password = $this->security->hash($args['password']);
 		$_user->created = date('Y-m-d H:i:s');
 		$_user->enabled = 0;
 		if($_user->save() && $_user->id > 0){

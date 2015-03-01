@@ -4,8 +4,12 @@ namespace Molotov\Modules\Auth\Models;
  * The Media used by our system
  */
  
+use Swagger\Annotations as SWG;
 use Molotov\Core\Models\BaseModel;
 
+/**
+ * @SWG\Model(id="Profile")
+ */
 class Profile extends BaseModel{
 
 

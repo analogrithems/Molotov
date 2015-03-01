@@ -1,0 +1,24 @@
+{
+    "apiVersion": "1.0.0",
+    "swaggerVersion": "1.2",
+    "apis": [
+        {
+            "path": "/Auth.{format}",
+            "description": "Authentication actions"
+        }
+    ],
+    "info": {
+        "title": "Molotov Framework",
+        "description": "This is the Molotv framework used to provide to provide high performance enterprise services",
+        "contact": "analogrithems@gmail.com",
+        "license": "Apache 2.0",
+        "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "authorizations": {
+        "apiKey": {
+            "type": "apiKey",
+            "passAs": "query",
+            "keyname": "MOLOTOV"
+        }
+    }
+}

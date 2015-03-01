@@ -84,7 +84,6 @@ class SessionController {
 	
 	public function login($login, $pass){
 	
-		$phpass = new \Hautelook\Phpass\PasswordHash(8, true);
 		
 		$user = User::findFirst(
 			array(
@@ -96,7 +95,7 @@ class SessionController {
 			)
 		);
 		
-		if( $user && $phpass->CheckPassword($pass,$user->password)){
+		if( $user && $this->di->get('security')->checkHash($pass,$user->password)){
 			//user was authenticated, update their session if they have one to prevent them
 			//having to auth again later
 			$this->session->user_id = $user->id;
