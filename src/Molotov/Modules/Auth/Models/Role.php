@@ -31,8 +31,7 @@ class Role extends BaseModel{
 	protected $fields = array(
 		'id',
 		'name',
-		'group_id',
-		'capabilities'
+		'group_id'
 	);
 	
 	public function initialize()
@@ -41,16 +40,16 @@ class Role extends BaseModel{
 	    
 		$this->hasManyToMany(
 		    "id",
-		    "Molotov\Modules\Auth\Models\RoleCapabilites",
+		    "Molotov\Modules\Auth\Models\RoleCapabilities",
 		    "role_id", "capability_id",
 		    "Molotov\Modules\Auth\Models\Capability",
 		    "id",
-		    array('alias'=>'Capabilites')
+		    array('alias'=>'Capabilities')
 		);
 	}
 	
 	public function afterFetch()
 	{
-	       $this->capabilities = $this->getCapabilites();
+	       $this->capabilities = $this->getCapabilities();
 	}
 }

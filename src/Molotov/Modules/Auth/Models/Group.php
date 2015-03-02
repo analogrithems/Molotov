@@ -7,7 +7,7 @@ use Swagger\Annotations as SWG;
 use Molotov\Core\Models\BaseModel;
 use Molotov\Modules\Auth\Models\Role;
 use Molotov\Modules\Auth\Models\Capability;
-use Molotov\Modules\Auth\Models\RoleCapabilites;
+use Molotov\Modules\Auth\Models\RoleCapabilities;
 
 /**
  * @SWG\Model(id="Group")
@@ -22,14 +22,9 @@ class Group extends BaseModel{
 	 * @SWG\Property(name="name",type="string")
 	 */
 	 
-	/**
-	 * @SWG\Property(name="role",type="Role")
-	 */
-	 
 	protected $fields = array(
 		'id',
-		'name',
-		'role'
+		'name'
 	);
 	
 	public function initialize()
@@ -54,13 +49,16 @@ class Group extends BaseModel{
 			$role = new Role();
 			$role->group_id = $this->id;
 			$role->name = $name;
-			$role_caps = array();
-			foreach($caps as $_cap){
-				$cap = Capability::findFirst("capability = '{$_cap}'");
-				$role_caps[] = $cap;
-			}
-			$role->capabilities = $role_caps;
 			$role->save();
+			foreach($caps as $_cap){
+				$role_capability = new RoleCapabilities();
+				$role_capability->role_id = $role->id;
+				$cap = Capability::findFirst("capability = '{$_cap}'");
+				if($cap){
+					$role_capability->capability_id = $cap->id;
+					$role_capability->save();
+				}
+			}
 		}
 	}
 }

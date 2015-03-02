@@ -29,9 +29,9 @@ class UserGroups extends BaseModel{
 	 */
 	public function findRoleByName( $title = null ){
 		$role = Role::findFirst(array(
-			'conditions'=>"owner_id=:owner_id: and name=:name:",
+			'conditions'=>"group_id=:group_id: and name=:name:",
 			'bind'=>array(
-				'owner_id'=>$this->group_id,
+				'group_id'=>$this->group_id,
 				'name'=>$title
 			)
 		));
@@ -60,7 +60,7 @@ class UserGroups extends BaseModel{
 	
 	public function getSource()
 	{
-		return 'usergroups';
+		return 'user_groups';
 	}
 
 	

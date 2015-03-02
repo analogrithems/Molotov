@@ -7,7 +7,7 @@ namespace Molotov\Modules\Auth\Controllers;
 use Molotov\Core\Controllers\BaseController;
 use Molotov\Modules\Auth\Models\Group;
 use Molotov\Modules\Auth\Models\Role;
-use Molotov\Modules\Auth\Models\RoleCapabilites;
+use Molotov\Modules\Auth\Models\RoleCapabilities;
 
  
 class RoleController extends BaseController{
@@ -50,7 +50,7 @@ class RoleController extends BaseController{
 	
 		if( !is_array($capabilities) ) return false;
 		//first remove curent capabilities
-		$currentCapabilities = RoleCapabilites::find(array(
+		$currentCapabilities = RoleCapabilities::find(array(
 			"role_id = :role_id:",
 			"bind"=>array(
 				"role_id"=>$role_id
@@ -64,7 +64,7 @@ class RoleController extends BaseController{
 		
 		//now set them to whatever is being set
 		foreach( $capabilities as $c ){
-			$nrcap = new RoleCapabilites();
+			$nrcap = new RoleCapabilities();
 			$nrcap->role_id = $role_id;
 			$nrcap->capability_id = $c;
 			$nrcap->save();

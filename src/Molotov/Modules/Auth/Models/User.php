@@ -9,6 +9,9 @@ use Molotov\Core\Models\BaseModel;
 use Phalcon\Mvc\Model\Validator\PresenceOf;
 use Phalcon\Mvc\Model\Validator\Email;
 use Phalcon\Mvc\Model\Validator\Uniqueness;
+use Molotov\Modules\Auth\Models\Role;
+use Molotov\Modules\Auth\Models\UserGroups;
+
 
 /**
  * @SWG\Model(id="User")
@@ -53,7 +56,11 @@ class User extends BaseModel{
 	 */
 	 
 	/**
-	 * @SWG\Property(name="groups",type="array",@SWG\Items("Group"))
+	 * @SWG\Property(name="group",type="Group")
+	 */
+	 
+	/**
+	 * @SWG\Property(name="role",type="Role")
 	 */
 
 	protected $fields = array(
@@ -63,8 +70,7 @@ class User extends BaseModel{
 		'password',
 		'group_id',
 		'enabled',
-		'created',
-		'groups'
+		'created'
 	);
 	
 	public function validation()
@@ -98,6 +104,11 @@ class User extends BaseModel{
 		}
 	}
 	
+	public function getRole(){
+		$ug = UserGroups::findFirst("user_id = {$this->id} and group_id = {$this->group_id}");
+		return Role::findFirst($ug->role_id);
+	}
+	
 	public function initialize()
 	{
         $this->belongsTo(
@@ -105,8 +116,7 @@ class User extends BaseModel{
         	"Molotov\Modules\Auth\Models\Group", 
         	"id", 
         	array(
-            	"foreignKey" => true,
-            	'alias' => 'group'
+            	'alias' => 'Group'
 			)
 		);
 		

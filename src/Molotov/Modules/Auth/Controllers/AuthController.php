@@ -61,12 +61,14 @@ class AuthController extends BaseController{
 	
 		if( $this->di->get('session')->login($email,$password) ){
 			$user = $this->di->get('session')->user;
-			$user->groups = $this->di->get('session')->getGroupRoles();
-			return array(
+			$response =  array(
 				'status'=>'ok', 
-				'user'=>$user->serialize(array('id','display_name','email','groups')), 
+				'user'=>$user->serialize(array('id','display_name','email')), 
 				'token'=>$this->di->get('session')->token
 			);
+			$response['user']['group'] =  $user->getGroup()->serialize();
+			$response['user']['role'] =  $user->getRole()->serialize();
+			return $response;
 		}else{
 			//Getting a response instance
 			$response = new \Phalcon\Http\Response();

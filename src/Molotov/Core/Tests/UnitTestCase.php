@@ -78,6 +78,7 @@ abstract class UnitTestCase extends \Phalcon\Test\UnitTestCase {
 		$this->assertEquals('ok',$response['status'],'Failed to login user:'.print_r($response,1));
 		$this->assertGreaterThan(0,$response['user']['id'],'Invalid user id');
 		//todo check for token & set it globally
+		echo "Debug:".print_r($response,1)."\n";
         return $response['user'];
 	}
 	

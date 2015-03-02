@@ -28,7 +28,7 @@ class Capability extends BaseModel{
 	public function initialize(){
 		$this->hasManyToMany(
 			"id",
-			"Molotov\Modules\Auth\Models\RoleCapabilites",
+			"Molotov\Modules\Auth\Models\RoleCapabilities",
 			"capability_id","role_id",
 			"Molotov\Modules\Auth\Models\Role",
 			"id"
