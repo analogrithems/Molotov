@@ -35,13 +35,15 @@ abstract class UnitTestCase extends \Phalcon\Test\UnitTestCase {
 	 * create a temporary user for unit test
 	 */
     public function createUser(){
-	   $email = 'tempUser@'.uniqid().'.org';
+	   $name = uniqid();
+	   $email = 'tempUser@'.$name.'.org';
 	   $password = '1qaz@WSX';
         $authController = new \Molotov\Modules\Auth\Controllers\AuthController();
         $_REQUEST = array(
         	'email'=> $email,
         	'password'=> $password,
-        	'display_name'=>'temp user'
+        	'display_name'=>'temp user',
+        	'group'=>$name
         );
 	    $_user = $_REQUEST;
 	    

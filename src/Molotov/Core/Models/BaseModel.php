@@ -1,5 +1,4 @@
 <?php
-
 namespace Molotov\Core\Models;
 
 class BaseModel extends \Phalcon\Mvc\Model{
@@ -10,7 +9,7 @@ class BaseModel extends \Phalcon\Mvc\Model{
         $this->di = \Phalcon\DI::getDefault();
     }
 	
-	/*
+	/**
 	* Magic functions to set the model properties based of an acl style
 	* fields array above
 	*/
@@ -20,7 +19,7 @@ class BaseModel extends \Phalcon\Mvc\Model{
 		}
 	}
 
-	/*
+	/**
 	* Magic functions to set the model properties based of an acl style
 	* fields array above
 	*/
@@ -28,7 +27,7 @@ class BaseModel extends \Phalcon\Mvc\Model{
 		if(	in_array( $field, $this->fields ) ) return $this->{$field};
 	}
 	
-	/*
+	/**
 	 * egressEvent  - This event is an optional event that can/should be defined in each
 	 * model that extends the base model. This feature is intended
 	 * to allow for optional saftey checks on a request after the data is fetched.  Also useful for 
@@ -38,7 +37,7 @@ class BaseModel extends \Phalcon\Mvc\Model{
 	 
 	 }
 	 
-	/*
+	/**
 	 * ingressEvent  - This event is an optional event that can/should be defined in each
 	 * model that extends the base model. This feature is intended
 	 * to allow for optional saftey checks on a request before the data is fetched.  Also useful for 
@@ -48,7 +47,7 @@ class BaseModel extends \Phalcon\Mvc\Model{
 	 
 	 }	 	
 	
- 	/*
+ 	/**
  	 * serialize - define how you serialize models.  You can pass it a 
  	 * hash reference array to define what the returned serialized model looks like
  	 */

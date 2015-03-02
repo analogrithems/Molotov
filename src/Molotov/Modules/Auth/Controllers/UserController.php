@@ -6,19 +6,49 @@ namespace Molotov\Modules\Auth\Controllers;
  
 use Molotov\Core\Controllers\BaseController;
 use Molotov\Modules\Auth\Models\User;
+use Molotov\Modules\Auth\Models\Group;
+use Molotov\Modules\Auth\Models\UserGroups;
 use Molotov\Modules\Auth\Models\EmailActivations;
 
 
 class UserController extends BaseController{
 
 	public function action_addUser( $args ){
+		//check if company exists or create it, if it exists make sure we have access to add to it
+		$session = $this->di->get('session');
+		$group = Group::findFirst(array(
+			"conditions"=>"name = :name:",
+			"bind"=>array(
+				"name"=>$args['group']
+			)
+		));
+		if($group){
+			die("Group:".print_r($group->serialize(),1)."\nGroup id:".print_r($session->user,1)."\nArgs:".print_r($args,1) );
+			if($session->user->group_id != $group->id || $session->can('add_user')){
+				return array('status'=>'error', 'message'=>"Permission denied");
+			}
+		}else{
+			$group = new Group();
+			$group->name = $args['group'];
+			$group->save();
+		}
+		
 		$_user = new User();
 		$_user->email = strtolower($args['email']);
 		$_user->display_name = $args['display_name'];
 		$_user->password = $this->security->hash($args['password']);
 		$_user->created = date('Y-m-d H:i:s');
+		$_user->group_id = $group->id;
 		$_user->enabled = 0;
 		if($_user->save() && $_user->id > 0){
+			
+			if($group->id){
+				$userGroup = new UserGroups();
+				$userGroup->user_id = $_user->id;
+				$userGroup->group_id = $group->id;
+				$userGroup->setRole('administrator');
+				$userGroup->save();
+			}
 			//send activation email
 			if( $this->sendActivationEmail($_user)) return array('status'=>'ok','message'=>"User created, please check email for account verification");
 			else return array('status'=>'error', 'message'=>"Email activation failed");

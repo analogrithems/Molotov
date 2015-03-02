@@ -28,27 +28,6 @@ class AuthController extends BaseController{
 	
     /**
      * @SWG\Api(
-     *   path="/Auth/Capabilities",
-     *   @SWG\Operation(
-     *     method="GET",
-     *     summary="Returns array of capabilities",
-     *     notes="Get's a list of the users available capabilities.  It uses your role in your current group to decide this.",
-     *     type="array"
-     *   )
-     * )
-     */
-	public function getCapabilities(){
-		$capabilityController = new CapabilityController();
-		$caps = $capabilityController->getCapabilities();
-		$result = array();
-		foreach($caps as $cap){
-			$result[] = array( 'id'=>$cap->id, 'name'=>$cap->capability );
-		}
-		return $result;
-	}
-	
-    /**
-     * @SWG\Api(
      *   path="/Auth/Login",
      *   @SWG\Operation(
      *     method="POST",
@@ -83,7 +62,11 @@ class AuthController extends BaseController{
 		if( $this->di->get('session')->login($email,$password) ){
 			$user = $this->di->get('session')->user;
 			$user->groups = $this->di->get('session')->getGroupRoles();
-			return array('status'=>'ok', 'user'=>$user->serialize(array('id','display_name','email','groups')));
+			return array(
+				'status'=>'ok', 
+				'user'=>$user->serialize(array('id','display_name','email','groups')), 
+				'token'=>$this->di->get('session')->token
+			);
 		}else{
 			//Getting a response instance
 			$response = new \Phalcon\Http\Response();
@@ -141,6 +124,27 @@ class AuthController extends BaseController{
 		}
 	}
 
+	
+    /**
+     * @SWG\Api(
+     *   path="/Auth/Capabilities",
+     *   @SWG\Operation(
+     *     method="GET",
+     *     summary="Returns array of capabilities",
+     *     notes="Get a list of all the capabilities",
+     *     type="array"
+     *   )
+     * )
+     */
+	public function getCapabilities(){
+		$capabilityController = new CapabilityController();
+		$caps = $capabilityController->getCapabilities();
+		$result = array();
+		foreach($caps as $cap){
+			$result[] = array( 'id'=>$cap->id, 'name'=>$cap->capability );
+		}
+		return $result;
+	}
 
     /**
      * @SWG\Api(
@@ -160,7 +164,7 @@ class AuthController extends BaseController{
      *       allowMultiple=false
      *     ),
      *     @SWG\Parameter(
-     *       name="email",
+     *       name="password",
      *       description="password for the new user",
      *       required=true,
      *       type="string",
@@ -168,7 +172,7 @@ class AuthController extends BaseController{
      *       allowMultiple=false
      *     ),
      *     @SWG\Parameter(
-     *       name="email",
+     *       name="display_name",
      *       description="display name for the new user",
      *       required=true,
      *       type="string",
@@ -184,10 +188,13 @@ class AuthController extends BaseController{
 		$validation->setFilters('password', 'trim');
 		$validation->setFilters('email', 'trim');
 		$validation->setFilters('display_name', 'trim');
+		$validation->setFilters('group', 'trim');
 		
 		$args['email'] = $this->di->get('request')->get('email');
 		$args['password']= $this->di->get('request')->get('password');
 		$args['display_name']= $this->di->get('request')->get('display_name');
+		$args['group']= $this->di->get('request')->get('group');
+		
 		$_user = new UserController();
 		$result = $_user->action_addUser($args);
 		return $result;

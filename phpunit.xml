@@ -8,7 +8,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="false"
+         stopOnFailure="true"
          syntaxCheck="true">
     <testsuite name="Phalcon - Testsuite">
         <directory>src/Molotov/Core/Tests/</directory>

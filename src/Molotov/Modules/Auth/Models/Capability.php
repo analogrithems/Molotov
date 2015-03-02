@@ -1,5 +1,5 @@
 <?php
-namespace Molotov\ModulesAuth\Models;
+namespace Molotov\Modules\Auth\Models;
 /*
  * The capability model
  */

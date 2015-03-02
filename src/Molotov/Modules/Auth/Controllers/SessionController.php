@@ -13,7 +13,7 @@ use Molotov\Modules\Auth\Models\Role;
   
 class SessionController {
 	protected static $instance = null;
-	public $session, $user, $groupRoles, $di;
+	public $session, $token, $user, $groupRoles, $di, $request;
 
 	protected function __construct(){}
 	protected function __clone(){}
@@ -22,7 +22,6 @@ class SessionController {
 		if(!isset(static::$instance)){
 			$inst = new static;
 			$inst->init();
-			$inst->di = \Phalcon\DI::getDefault();
 			static::$instance = $inst;
 		}
 		return static::$instance;
@@ -33,12 +32,29 @@ class SessionController {
 	* session exists it will start one
 	*/
 	private function init(){
-		if( !isset($_COOKIE[AUTH_COOKIE_NAME]) ){
-			$session_id = uniqid(sha1(rand()),true);
-			$request = new \Phalcon\Http\Request();
+		$this->di = \Phalcon\DI::getDefault();
+		$this->request = new \Phalcon\Http\Request();
+		$r = $this->di->get('request')->get();
+		if( isset($r['token']) && !empty($r['token']) ){
+			$this->token = $r['token'];
+		}elseif( isset($_COOKIE[AUTH_COOKIE_NAME]) && !empty($_COOKIE[AUTH_COOKIE_NAME]) ){
+			$this->token = $_COOKIE[AUTH_COOKIE_NAME];
+		}else{
+			$this->token = $session_id = uniqid(sha1(rand()),true);
+		}
+		
+		$this->session = Session::findFirst(
+			array(
+				"token = :token:",
+				"bind" => array(
+					'token' => $this->token
+				)
+			)
+		);
+		if(!$this->session){
 			setcookie(
 				AUTH_COOKIE_NAME,
-				$session_id,
+				$this->token,
 				AUTH_COOKIE_EXPIRE,
 				AUTH_COOKIE_PATH,
 				AUTH_COOKIE_DOMAIN,
@@ -48,38 +64,24 @@ class SessionController {
 			$this->session = new Session();
 			$this->session->session = array();
 			$this->session->user_id = 0;
-			$this->session->token = $session_id;
+			$this->session->token = $this->token;
 			$this->session->created = date('Y-m-d H:i:s');
-			$this->session->ip = $request->getClientAddress();
+			$this->session->ip = $this->request->getClientAddress();
 			$this->session->save();
-		}else{
-			//we have a cookie unserialize our session
-			$this->session = Session::findFirst(
+		}
+		
+		if( $this->session->user_id > 0 ){
+			$this->user = User::findFirst(
 				array(
-					"token = :token:",
+					"id = :id:",
 					"bind" => array(
-						'token' => $_COOKIE[AUTH_COOKIE_NAME]
+						'id' => $this->session->user_id
 					)
 				)
 			);
-			if(!$this->session){
-				//session invalid, rebuild
-				unset($_COOKIE[AUTH_COOKIE_NAME]);
-				$this->init();
-			}
 			
-			if( $this->session->user_id > 0 ){
-				$this->user = User::findFirst(
-					array(
-						"id = :id:",
-						"bind" => array(
-							'id' => $this->session->user_id
-						)
-					)
-				);
-				
-			}
 		}
+
 	}
 	
 	public function login($login, $pass){
@@ -128,7 +130,8 @@ class SessionController {
 	*/	
 	public function logout(){
 		$this->di->get('eventsManager')->fire( 'session:logout', $this);
-		unset($_COOKIE[AUTH_COOKIE_NAME]);
+		$this->session->user_id = 0;
+		$this->session->save();
 		$this->init();
 		return true;
 	}

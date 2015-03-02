@@ -20,7 +20,7 @@ class GroupController extends BaseController{
 			)
 		));
 		
-		if( $exists ){
+		if( !$exists ){
 			$newGroup = new Group();
 			$newGroup->name = $name;
 			$newGroup->save();
@@ -29,7 +29,7 @@ class GroupController extends BaseController{
 				$userGroup = new UserGroups();
 				$userGroup->user_id = $firstUser;
 				$userGroup->group_id = $newGroup->id;
-				$userGroup->role_id = 1;//groupAdmin
+				$userGroup->setRole('administrator');
 				$userGroup->save();
 				die(print_r($userGroup->serialize(),1));
 			}

@@ -157,6 +157,7 @@ $app = new Phalcon\Mvc\Micro($di);
 $debug = new \Phalcon\Debug();
 $debug->listen();
 
+/*
 set_exception_handler(function($e)
 {
     $p = new \Phalcon\Utils\PrettyExceptions();
@@ -168,7 +169,7 @@ set_error_handler(function($errorCode, $errorMessage, $errorFile, $errorLine)
     $p = new \Phalcon\Utils\PrettyExceptions();
     return $p->handleError($errorCode, $errorMessage, $errorFile, $errorLine);
 });
-
+*/
 
 //We now have a message queue
 $di->setShared('queue', function() use ($config,$di){

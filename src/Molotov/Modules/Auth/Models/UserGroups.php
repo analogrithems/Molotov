@@ -6,6 +6,7 @@ namespace Molotov\Modules\Auth\Models;
  
 use Swagger\Annotations as SWG;
 use Molotov\Core\Models\BaseModel;
+use Molotov\Modules\Auth\Models\Role;
 
 
 /**
@@ -19,6 +20,43 @@ class UserGroups extends BaseModel{
 		'group_id',
 		'role_id'
 	);
+	
+	/**
+	 * finds a role in a specific group
+	 *
+	 * @param string $title
+	 * @return Molotov\Modules\Auth\Models\Role
+	 */
+	public function findRoleByName( $title = null ){
+		$role = Role::findFirst(array(
+			'conditions'=>"owner_id=:owner_id: and name=:name:",
+			'bind'=>array(
+				'owner_id'=>$this->group_id,
+				'name'=>$title
+			)
+		));
+		if($role){
+			return $role;
+		}else{
+			return false;
+		}
+	}
+	
+	
+	/**
+	 * find a specific role and set it to the current record
+	 *
+	 * @param string $title
+	 * @return bool
+	 */
+	public function setRole( $title ){
+		$role = $this->findRoleByName($title);
+		if($role){
+			$this->role_id = $role->id;
+		}else{
+			return false;
+		}
+	}
 	
 	public function getSource()
 	{

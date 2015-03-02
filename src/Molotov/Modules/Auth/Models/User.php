@@ -100,6 +100,16 @@ class User extends BaseModel{
 	
 	public function initialize()
 	{
+        $this->belongsTo(
+        	"group_id", 
+        	"Molotov\Modules\Auth\Models\Group", 
+        	"id", 
+        	array(
+            	"foreignKey" => true,
+            	'alias' => 'group'
+			)
+		);
+		
 		$this->hasManyToMany(
 			"id",
 			"Molotov\Modules\Auth\Models\UserGroups",
