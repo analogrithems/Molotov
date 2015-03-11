@@ -14,5 +14,16 @@
     "psr-0": {
       "Molotov": "src"
     }
+  },
+  "scripts": {
+	"swagger": [
+		"php ./vendor/zircote/swagger-php/swagger.phar --exclude ./vendor/ --bootstrap ./scripts/swagger-bootstrap.php . -o ./docs/swagger-docs"
+	],
+	"runSetup": [
+		"php ./scripts/install.php"
+	],
+	"phpunit": [
+		"php ./vendor/phpunit/phpunit/phpunit.php"
+	]
   }
 }
