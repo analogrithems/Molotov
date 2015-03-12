@@ -1,0 +1,22 @@
+{JS src/Molotov/Modules/Auth/Web/js/group.js}
+<div id="groupManager" data-bind="if: show">
+    
+    <div class="segment">
+        
+        <div>
+            <div class="button" data-bind="click: newGroup">
+                <span>
+                    New Group
+                </span>
+            </div>
+        </div>
+        <hr />
+        <!-- ko foreach: groups -->
+        <div>
+            <span data-bind="text: name"></span>
+            
+        </div>
+        <!-- /ko -->
+    </div>
+    
+</div>

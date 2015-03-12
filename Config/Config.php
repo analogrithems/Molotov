@@ -1,31 +1,30 @@
 <?php
 /*
-* Elastic Search Server Settings
+* Movotov Base Settings
 */
 return array(
-	'namespaces' => array(
-		'Molotov\Core\Models' =>  APP_ROOT_DIR . "/Core/Models",
-		'Molotov\Core\Controllers' =>  APP_ROOT_DIR . "/Core/Controllers",
-		'Molotov\Core\Tests' =>  APP_ROOT_DIR . "/Core/Tests",
-	),
 	'esconfig'=> array(
 		'host'=> 'localhost',
 		'port'=> 9200
 	),
 	'db'=>array(
-	    "host" => 'localhost',
-	    "username" => "av",
+	    "hostname" => 'localhost',
+	    "username" => "molotov",
 	    "password" => "sdhw93fq2das",
-	    "dbname" => 'av',
-            "table_prefix" => 'av_',
+	    "dbname" => 'molotov',
 	    'logging'=> array(
 	    	'file'=>  APP_ROOT_DIR . '/Logs/sql.query.log'
 	    )
 	),
 	'logging'=>array(
 		'file'=> APP_ROOT_DIR . '/Logs/debug',
-		'enabled'=> true
+		'enabled'=> true,
+		'log_driver'=>'Firephp'
 	),
-	'site_url'=>"https://vault.asynonymous.net"
-	
+	'site_url'=> 'http://development.asynonymous.net',
+	'queue_host'=> 'localhost',
+	'debug'=>false,
+	'default_layout'=> '/web/default_layout/Common/',
+	'test_email'=>'aaron.collinsa@gmail.com',
+	'cache'=>APP_ROOT_DIR.'/web/cache'
 );

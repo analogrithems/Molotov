@@ -7,8 +7,20 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
+    'Symfony\\Component\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher'),
+    'Swagger' => array($vendorDir . '/zircote/swagger-php/library'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
+    'Pimple' => array($vendorDir . '/pimple/pimple/src'),
     'Phalcon' => array($vendorDir . '/phalcon/incubator/Library'),
-    'Elastica\\Test' => array($vendorDir . '/ruflin/elastica/test/lib'),
-    'Elastica' => array($vendorDir . '/ruflin/elastica/lib'),
-    'Arez' => array($baseDir . '/src'),
+    'Molotov' => array($baseDir . '/src'),
+    'Hautelook' => array($vendorDir . '/hautelook/phpass/src'),
+    'Guzzle\\Stream' => array($vendorDir . '/guzzle/stream'),
+    'Guzzle\\Parser' => array($vendorDir . '/guzzle/parser'),
+    'Guzzle\\Http' => array($vendorDir . '/guzzle/http'),
+    'Guzzle\\Common' => array($vendorDir . '/guzzle/common'),
+    'Elasticsearch\\Tests' => array($vendorDir . '/elasticsearch/elasticsearch/tests'),
+    'Elasticsearch\\Benchmarks' => array($vendorDir . '/elasticsearch/elasticsearch/benchmarks'),
+    'Elasticsearch' => array($vendorDir . '/elasticsearch/elasticsearch/src'),
+    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
+    'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
 );

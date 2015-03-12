@@ -1,0 +1,29 @@
+<?php
+	
+	$default_roles = array(
+		'administrator'=>array(
+			'add_user',
+			'edit_user',
+			'delete_user',
+			'view_users',
+			'add_role',
+			'edit_role',
+			'delete_role',
+			'view_roles',
+			'add_page',
+			'edit_page',
+			'delete_page',
+			'view_page'
+		),
+		'content_editor'=>array(
+			'view_users',
+			'view_role',
+			'add_page',
+			'edit_page',
+			'delete_page',
+			'view_page'
+		),
+		'guest'=>array(
+			'view_page'
+		)
+	);

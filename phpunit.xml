@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="src/Molotov/Core/Tests/TestHelper.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         verbose="true"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="true"
+         syntaxCheck="true">
+    <testsuite name="Phalcon - Testsuite">
+        <directory>src/Molotov/Core/Tests/</directory>
+        <directory>src/Molotov/Modules/*/Tests/</directory>
+    </testsuite>
+</phpunit>

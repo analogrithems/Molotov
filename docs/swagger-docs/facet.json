@@ -1,0 +1,134 @@
+{
+    "basePath": "http://facetstore.zircote.com/swagger-php/api",
+    "swaggerVersion": "1.2",
+    "apiVersion": "0.2",
+    "resourcePath": "/facet",
+    "apis": [
+        {
+            "path": "/$ref:model/",
+            "description": "allow namespaces and underscores in model names",
+            "operations": [
+                {
+                    "method": "GET",
+                    "nickname": "modelReferencing",
+                    "type": "array",
+                    "items": {
+                        "$ref": "Examples\\Some_Model"
+                    }
+                }
+            ]
+        },
+        {
+            "path": "/facet.{format}/{facetId}",
+            "description": "Operations about facets",
+            "operations": [
+                {
+                    "method": "GET",
+                    "summary": "Find facet by ID",
+                    "nickname": "getfacetById",
+                    "type": "FacetResult",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "facetId",
+                            "type": "string",
+                            "required": true,
+                            "description": "ID of facet that needs to be fetched"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "facet not found"
+                        }
+                    ],
+                    "notes": "Returns a facet based on ID"
+                },
+                {
+                    "method": "DELETE",
+                    "summary": "Find facet by ID",
+                    "nickname": "getfacetById",
+                    "parameters": [
+                        {
+                            "paramType": "path",
+                            "name": "facetId",
+                            "type": "string",
+                            "required": true,
+                            "description": "ID of facet that needs to be fetched"
+                        }
+                    ],
+                    "responseMessages": [
+                        {
+                            "code": 400,
+                            "message": "Invalid ID supplied"
+                        },
+                        {
+                            "code": 404,
+                            "message": "facet not found"
+                        }
+                    ],
+                    "notes": "Returns a facet based on ID"
+                }
+            ]
+        }
+    ],
+    "models": {
+        "FacetResult": {
+            "id": "FacetResult",
+            "properties": {
+                "facetSets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "FacetSet"
+                    }
+                }
+            }
+        },
+        "FacetSet": {
+            "id": "FacetSet",
+            "properties": {
+                "facets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Facet"
+                    }
+                }
+            }
+        },
+        "Facet": {
+            "id": "Facet",
+            "properties": {
+                "prop1": {
+                    "type": "string"
+                },
+                "prop2": {
+                    "type": "string"
+                },
+                "prop3": {
+                    "$ref": "Some_Object"
+                }
+            }
+        },
+        "Examples\\Some_Model": {
+            "id": "Examples\\Some_Model",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "Examples\\Some_Model"
+                    }
+                }
+            }
+        }
+    },
+    "produces": [
+        "application/json"
+    ]
+}
