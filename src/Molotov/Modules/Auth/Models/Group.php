@@ -27,6 +27,12 @@ class Group extends BaseModel{
 		'name'
 	);
 	
+	
+	public function getSource()
+	{
+		return 'groups';
+	}
+	
 	public function initialize()
 	{
 		$this->hasManyToMany(
@@ -44,7 +50,7 @@ class Group extends BaseModel{
 	 */
 	public function afterCreate(){
 		//create default roles for this new group
-		include_once(AUTH_MODULE_DIR.'/data/default_roles.php');
+		include(AUTH_MODULE_DIR.'/data/default_roles.php');
 		foreach($default_roles as $name=>$caps){
 			$role = new Role();
 			$role->group_id = $this->id;

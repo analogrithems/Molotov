@@ -23,6 +23,11 @@ class Session extends BaseModel{
 	);
 	
 	
+	public function getSource()
+	{
+		return 'sessions';
+	}
+	
 	public function beforeSave()
 	{
 		if(is_array($this->session)){

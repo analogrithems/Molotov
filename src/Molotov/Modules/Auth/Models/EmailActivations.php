@@ -52,7 +52,7 @@ class EmailActivations extends BaseModel{
 	
 	public function getSource()
 	{
-		return'emailactivations';
+		return 'emailactivations';
 	}
 	
 	public function initialize()

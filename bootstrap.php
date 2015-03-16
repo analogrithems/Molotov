@@ -67,12 +67,22 @@ $di->set('profiler', function(){
 //database up
 $di->setShared('db', function() use ($config,$di) {
 
-    $connection = new Phalcon\Db\Adapter\Pdo\Mysql(array(
-    	'hostname'=>$config['db']['hostname'],
-    	'username'=>$config['db']['username'],
-    	'password'=>$config['db']['password'],
-    	'dbname'=>$config['db']['dbname'],
-    ));	
+	switch($config['db']['driver']){
+		case 'Mysql':
+		    $connection = new Phalcon\Db\Adapter\Pdo\Mysql($config['db']['creds']);
+		    break;
+		case 'Postgresql':
+			$connection = new \Phalcon\Db\Adapter\Pdo\Postgresql($this->db_args);
+			break;
+		default:
+			if( isset($config['db']['creds']['dbname']) &&  !file_exists($config['db']['creds']['dbname']) ){
+				if( !file_exists(dirname($config['db']['creds']['dbname']))){
+					mkdir(dirname($config['db']['creds']['dbname']),0750,true);
+				}
+			}
+			$connection = new \Phalcon\Db\Adapter\Pdo\Sqlite($this->db_args);
+			break;
+	}
 
 	//set sql logging
 	if( isset( $config['logging']['enabled'] ) && true === $config['logging']['enabled'] 

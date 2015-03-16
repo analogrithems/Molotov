@@ -16,17 +16,17 @@ return array (
       'hostname' => 'localhost',
       'dbname' => 'molotov',
       'username' => 'molotov',
-      'password' => 'sdhw93fq2das',
+      'password' => 'secret',
       'charset' => 'utf8',
     ),
     'logging' => 
     array (
-      'file' => '/home/analogrithems/development.asynonymous.net/htdocs/Molotov/Logs/sql.query.log',
+      'file' => APP_ROOT_DIR.'Logs/sql.query.log',
     ),
   ),
   'logging' => 
   array (
-    'file' => '/home/analogrithems/development.asynonymous.net/htdocs/Molotov/Logs/debug',
+    'file' => APP_ROOT_DIR.'Logs/debug',
     'enabled' => true,
     'log_driver' => 'Firephp',
   ),
@@ -35,5 +35,5 @@ return array (
   'debug' => false,
   'default_layout' => '/web/default_layout/Common/',
   'test_email' => 'aaron.collinsa@gmail.com',
-  'cache' => '/home/analogrithems/development.asynonymous.net/htdocs/Molotov/web/cache',
+  'cache' => APP_ROOT_DIR.'web/cache',
 );
