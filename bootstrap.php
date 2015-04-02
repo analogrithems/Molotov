@@ -142,6 +142,10 @@ $di->setShared('utils',function(){
 	return new Molotov\Core\Lib\Utils();
 });
 
+$di->setShared('html_sanitize',function(){
+	return new Molotov\Core\Lib\HTMLSanitize();
+});
+
 $di->set('assets',function() use ($config){
 	return new Phalcon\Assets\Manager();
 });
