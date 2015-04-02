@@ -1,0 +1,3 @@
+[submodule "web/js/drdelambre"]
+	path = web/js/drdelambre
+	url = git@github.com:drdelambre/drdelambre.git
