@@ -23,8 +23,8 @@ header("Access-Control-Allow-Credentials:false");
 require_once(__DIR__ . '/vendor/autoload.php');
 
 define('APP_ROOT_DIR',__DIR__.'/');
-define('MODULES_DIR',APP_ROOT_DIR . '/src/Molotov/Modules');
-define('CORE_TEST_DIR', APP_ROOT_DIR . '/src/Molotov/Core/Tests' );
+define('MODULES_DIR',APP_ROOT_DIR . '/App/Modules');
+define('CORE_TEST_DIR', APP_ROOT_DIR . '/App/Core/Tests' );
 
 // Init DIC and App Wide Services
 $di = new Phalcon\DI\FactoryDefault();

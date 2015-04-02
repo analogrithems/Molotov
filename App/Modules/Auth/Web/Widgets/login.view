@@ -1,5 +1,5 @@
-{JS src/Molotov/Modules/Auth/Web/js/login.js}
-{CSS web/css/bootstrap.min.css, src/Molotov/Modules/Auth/Web/css/custom.css }
+{JS App/Modules/Auth/Web/js/login.js}
+{CSS web/css/bootstrap.min.css, App/Modules/Auth/Web/css/custom.css }
 <div id="login" class="container" style="display: none;" data-bind="visible: show">
     <div class="row" data-bind="if: show">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
