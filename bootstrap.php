@@ -23,8 +23,8 @@ header("Access-Control-Allow-Credentials:false");
 require_once(__DIR__ . '/vendor/autoload.php');
 
 define('APP_ROOT_DIR',__DIR__.'/');
-define('MODULES_DIR',APP_ROOT_DIR . '/src/Molotov/Modules');
-define('CORE_TEST_DIR', APP_ROOT_DIR . '/src/Molotov/Core/Tests' );
+define('MODULES_DIR',APP_ROOT_DIR . '/App/Modules');
+define('CORE_TEST_DIR', APP_ROOT_DIR . '/App/Core/Tests' );
 
 // Init DIC and App Wide Services
 $di = new Phalcon\DI\FactoryDefault();
@@ -67,12 +67,22 @@ $di->set('profiler', function(){
 //database up
 $di->setShared('db', function() use ($config,$di) {
 
-    $connection = new Phalcon\Db\Adapter\Pdo\Mysql(array(
-    	'hostname'=>$config['db']['hostname'],
-    	'username'=>$config['db']['username'],
-    	'password'=>$config['db']['password'],
-    	'dbname'=>$config['db']['dbname'],
-    ));	
+	switch($config['db']['driver']){
+		case 'Mysql':
+		    $connection = new Phalcon\Db\Adapter\Pdo\Mysql($config['db']['creds']);
+		    break;
+		case 'Postgresql':
+			$connection = new \Phalcon\Db\Adapter\Pdo\Postgresql($this->db_args);
+			break;
+		default:
+			if( isset($config['db']['creds']['dbname']) &&  !file_exists($config['db']['creds']['dbname']) ){
+				if( !file_exists(dirname($config['db']['creds']['dbname']))){
+					mkdir(dirname($config['db']['creds']['dbname']),0750,true);
+				}
+			}
+			$connection = new \Phalcon\Db\Adapter\Pdo\Sqlite($this->db_args);
+			break;
+	}
 
 	//set sql logging
 	if( isset( $config['logging']['enabled'] ) && true === $config['logging']['enabled'] 
@@ -130,6 +140,10 @@ $di->setShared('log', function() use ($config) {
 
 $di->setShared('utils',function(){
 	return new Molotov\Core\Lib\Utils();
+});
+
+$di->setShared('html_sanitize',function(){
+	return new Molotov\Core\Lib\HTMLSanitize();
 });
 
 $di->set('assets',function() use ($config){

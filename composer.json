@@ -1,18 +1,16 @@
 {
   "require": {
-    "ruflin/Elastica": "dev-master",
     "phpunit/phpunit": "3.7.*",
-    "elasticsearch/elasticsearch": "~1.0",
     "phpmailer/phpmailer": "dev-master",
     "hautelook/phpass": "dev-master",
-    "swiftmailer/swiftmailer": "*",
     "phalcon/incubator": "v1.3.4",
     "ovr/phalcon-pretty-exceptions": "dev-composer",
-    "zircote/swagger-php": "*"
+    "zircote/swagger-php": "*",
+    "ezyang/htmlpurifier": "dev-master"
   },
   "autoload": {
-    "psr-0": {
-      "Molotov": "src"
+    "psr-4": {
+      "Molotov\\": "App"
     }
   },
   "scripts": {
